@@ -1,18 +1,24 @@
-const toggleDarkMode = () => {
-  const htmlElement = document.documentElement;
-
-  if (htmlElement.classList.contains("dark")) {
-    htmlElement.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  } else {
-    htmlElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  }
-};
-
-window.addEventListener("DOMContentLoaded", () => {
+export function setupDarkModeToggle() {
+  const body = document.body;
+  const toggle = document.getElementById("toggle");
   const savedTheme = localStorage.getItem("theme");
+
   if (savedTheme === "dark") {
-    document.documentElement.classList.add("dark");
+    body.classList.add("dark");
+    toggle?.classList.add("dark");
   }
-});
+
+  toggle?.addEventListener("click", () => {
+    const isDarkMode = body.classList.contains("dark");
+
+    if (isDarkMode) {
+      body.classList.remove("dark");
+      toggle.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      body.classList.add("dark");
+      toggle.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  });
+}

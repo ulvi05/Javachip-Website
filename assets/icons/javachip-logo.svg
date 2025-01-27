@@ -1,4 +1,5 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 628 209">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+width="243" height="81" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 628 209">
     <defs>
         <linearGradient id="linear-gradient" x1="167.45" y1="116.77" x2="582.25" y2="116.77" gradientUnits="userSpaceOnUse"><stop offset="0.11" stop-color="#101010"/><stop offset="0.34" stop-color="#159939"/><stop offset="1" stop-color="#3bbeef"/></linearGradient>
         <linearGradient id="linear-gradient-2" x1="167.21" y1="116.63" x2="582.01" y2="116.63" xlink:href="#linear-gradient"/>
