@@ -20,7 +20,7 @@
   <body
     class="text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white"
   >
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <nav class="relative bg-white border-gray-200 dark:bg-gray-900">
       <div
         class="flex items-center justify-between max-w-screen-xl gap-6 p-4 mx-auto"
       >
@@ -37,27 +37,118 @@
           class="flex items-center space-x-2 md:order-2 md:space-x-4 rtl:space-x-reverse"
         >
           <div id="toggle" class="mr-2 toggle"></div>
-          <button
-            type="button"
-            id="language-dropdown-btn"
-            class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-900 rounded-lg cursor-pointer dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-          >
-            <img
-              class="w-5 h-5 rounded-full me-3"
-              src="/assets/images/en-flag.png"
-              alt="en"
-            />
-            English
-          </button>
+          <div class="relative">
+            <button
+              type="button"
+              id="language-dropdown-btn"
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-900 rounded-lg cursor-pointer dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+            >
+              <img
+                class="w-5 h-5 rounded-full me-3"
+                src="/assets/images/en-flag.png"
+                alt="en"
+              />
+              English
+            </button>
+            <div
+              id="language-dropdown-menu"
+              class="absolute right-0 z-50 hidden w-40 mt-2 bg-white rounded-lg shadow-lg dark:bg-gray-800"
+            >
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                <li>
+                  <a
+                    href="#"
+                    class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <img
+                      class="w-5 h-5 rounded-full me-3"
+                      src="/assets/images/en-flag.png"
+                      alt="en"
+                    />
+                    English
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <img
+                      class="w-5 h-5 rounded-full me-3"
+                      src="/assets/images/az-flag.png"
+                      alt="en"
+                    />
+                    Azerbaijani
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <img
+                      class="w-5 h-5 rounded-full me-3"
+                      src="/assets/images/ru-flag.png"
+                      alt="en"
+                    />
+                    Russian
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
           <button
             id="menu-btn"
-            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           >
-            <img src="/assets/icons/hamburger-menu2.svg" alt="burger" />
+            <img
+              id="burger-icon"
+              src="/assets/icons/burger-black.svg"
+              alt="burger"
+            />
           </button>
         </div>
-
+        <!-- Mobile Menu -->
+        <div
+          id="navbar-language"
+          class="absolute left-0 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 md:hidden dark:bg-gray-800 dark:border-gray-700"
+        >
+          <ul class="flex flex-col p-4 space-y-2">
+            <li>
+              <a
+                href="/src/pages/main/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/portfolio/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/about/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/services/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                Services
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-language"
@@ -130,7 +221,7 @@
             class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl"
           >
             <span class="block xl:inline">Innovation Starts with Code</span>
-            <span class="block text-indigo-600 dark:text-indigo-400 xl:inline">
+            <span class="block text-[#159939] dark:text-[#3bbeef] xl:inline">
               Let’s Build Together.
             </span>
           </h1>
@@ -143,7 +234,7 @@
           <div class="mt-6">
             <a href="/src/pages/contact/index.html">
               <button
-                class="px-6 py-3 text-2xl font-bold text-white bg-indigo-600 rounded-lg hover:bg-indigo-500 focus:outline-none dark:bg-indigo-400 dark:hover:bg-indigo-300"
+                class="px-6 py-3 text-2xl font-bold text-white bg-[#159939] rounded-lg hover:bg-[#34a3cc] focus:outline-none dark:bg-[#3bbeef] dark:hover:bg-[#159939]"
               >
                 Contact Us
               </button>
@@ -167,12 +258,15 @@
     <section
       class="relative p-4 text-black bg-gray-50 dark:bg-black dark:text-white"
     >
-      <h1 class="pt-16 text-4xl font-bold text-center lg:text-8xl md:text-6xl">
+      <h1
+        class="pt-16 text-4xl font-bold text-center lg:text-8xl md:text-6xl dark:text-[#3bbeef] text-[#159939]"
+      >
         Our Services
       </h1>
       <div
         class="bg-[#3bbeef33] absolute bottom-0 h-[90%] left-[49%] w-0.5"
       ></div>
+      <!-- Service Item Web -->
       <div class="flex items-center justify-around">
         <div class="flex items-center justify-center">
           <img
@@ -183,11 +277,13 @@
         </div>
         <div class="flex flex-col items-center mb-16">
           <div class="flex flex-col justify-center pt-[20%] w-[40vw]">
-            <h3 class="text-[#3bbeef] text-6xl">Web Development</h3>
+            <h3 class="dark:text-[#3bbeef] text-[#159939] text-6xl">
+              Web Development
+            </h3>
             <p class="text-3xl font-bold mt-1.5 dark:text-white text-black">
               Step into the Future with a Website That Wows
             </p>
-            <p class="text-xl font-light text-black dark:text-white">
+            <p class="text-xl font-light text-black dark:text-white mt-1.5">
               Say goodbye to the yellow pages because, in the digital age,
               people don't reach for the phonebook when they need to find a
               business. They reach for their smartphones. With a well-designed
@@ -199,6 +295,180 @@
               we can build for you.
             </p>
           </div>
+          <a href="/src/pages/services/index.html">
+            <button
+              class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
+            >
+              <div
+                class="flex items-center transition-all duration-300 hover:animate-slideRight"
+              >
+                <p class="pr-2">Learn More</p>
+                <img
+                  class="lg:w-[60px] md:w-[50px] w-10"
+                  src="/assets/icons/arrow.svg"
+                  alt="arrow"
+                />
+              </div>
+              <img
+                class="lg:w-[60px] md:w-[50px] w-10 relative right-6"
+                src="/assets/icons/btn-circle.svg"
+                alt="btn-circle"
+              />
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Service Item Mobile -->
+      <div class="flex items-center justify-around">
+        <div class="flex flex-col items-center mb-16">
+          <div class="flex flex-col justify-center pt-[20%] w-[40vw]">
+            <h3 class="dark:text-[#3bbeef] text-[#159939] text-6xl">
+              Mobile App Development
+            </h3>
+            <p class="text-3xl font-bold mt-1.5 dark:text-white text-black">
+              Put Your Business in the Palm of Their Hand
+            </p>
+            <p class="text-xl font-light text-black dark:text-white mt-1.5">
+              The world is becoming increasingly mobile, and as a business
+              owner, you need to be where your customers are. With more and more
+              people using their smartphones for everything, a mobile app can be
+              a game-changer for your business. With a mobile app, your
+              customers will have easy and convenient access to your business,
+              whether they need to make a purchase, book an appointment, or just
+              get some information. A great mobile app will keep your customers
+              engaged and coming back for more. Who knows, they may even tell
+              their friends and family about your business!
+            </p>
+          </div>
+          <a href="/src/pages/services/index.html">
+            <button
+              class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
+            >
+              <div
+                class="flex items-center transition-all duration-300 hover:animate-slideRight"
+              >
+                <p class="pr-2">Learn More</p>
+                <img
+                  class="lg:w-[60px] md:w-[50px] w-10"
+                  src="/assets/icons/arrow.svg"
+                  alt="arrow"
+                />
+              </div>
+              <img
+                class="lg:w-[60px] md:w-[50px] w-10 relative right-6"
+                src="/assets/icons/btn-circle.svg"
+                alt="btn-circle"
+              />
+            </button>
+          </a>
+        </div>
+        <div class="flex items-center justify-center">
+          <img
+            class="w-[45vw]"
+            src="/assets/images/services-image-mobile.png"
+            alt="Services Item2"
+          />
+        </div>
+      </div>
+      <!-- Service Item AI -->
+      <div class="flex items-center justify-around">
+        <div class="flex items-center justify-center">
+          <img
+            class="w-[45vw]"
+            src="/assets/images/services-image-ai.png"
+            alt="Services Item"
+          />
+        </div>
+        <div class="flex flex-col items-center mb-16">
+          <div class="flex flex-col justify-center pt-[20%] w-[40vw]">
+            <h3 class="dark:text-[#3bbeef] text-[#159939] text-6xl">
+              Artificial Intelligence
+            </h3>
+            <p class="text-3xl font-bold mt-1.5 dark:text-white text-black">
+              Future-Proof Your Business and Stay Ahead of the Competition
+            </p>
+            <p class="text-xl font-light text-black dark:text-white mt-1.5">
+              Imagine this: A business that runs like a well-oiled machine, with
+              AI taking care of the tedious tasks and freeing up time for you to
+              focus on growth and innovation. A business that has access to
+              valuable insights and can make informed decisions that drive
+              success. Artificial Intelligence is no longer a thing of the
+              future - it's here, and it's changing the way we do business. Our
+              AI solutions will help you streamline your processes, enhance your
+              customer experience, and gain valuable insights into your
+              business. Let's harness the power of AI today!
+            </p>
+          </div>
+          <a href="/src/pages/services/index.html">
+            <button
+              class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
+            >
+              <div
+                class="flex items-center transition-all duration-300 hover:animate-slideRight"
+              >
+                <p class="pr-2">Learn More</p>
+                <img
+                  class="lg:w-[60px] md:w-[50px] w-10"
+                  src="/assets/icons/arrow.svg"
+                  alt="arrow"
+                />
+              </div>
+              <img
+                class="lg:w-[60px] md:w-[50px] w-10 relative right-6"
+                src="/assets/icons/btn-circle.svg"
+                alt="btn-circle"
+              />
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Service Item Cyber -->
+      <div class="flex items-center justify-around">
+        <div class="flex flex-col items-center mb-16">
+          <div class="flex flex-col justify-center pt-[20%] w-[40vw]">
+            <h3 class="dark:text-[#3bbeef] text-[#159939] text-6xl">
+              Cyber Security
+            </h3>
+            <p class="text-3xl font-bold mt-1.5 dark:text-white text-black">
+              Sleep Soundly at Night with Cyber Security That's Got Your Back
+            </p>
+            <p class="text-xl font-light text-black dark:text-white mt-1.5">
+              You've worked hard to build your business. As a business owner,
+              you know the importance of protecting your business from cyber
+              threats. Don't let a security breach bring everything crashing
+              down. With the rise of cyber attacks, it's more critical than ever
+              to have robust security measures in place. Invest in your peace of
+              mind and protect your business with our Cyber Security services.
+            </p>
+          </div>
+          <a href="/src/pages/services/index.html">
+            <button
+              class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
+            >
+              <div
+                class="flex items-center transition-all duration-300 hover:animate-slideRight"
+              >
+                <p class="pr-2">Learn More</p>
+                <img
+                  class="lg:w-[60px] md:w-[50px] w-10"
+                  src="/assets/icons/arrow.svg"
+                  alt="arrow"
+                />
+              </div>
+              <img
+                class="lg:w-[60px] md:w-[50px] w-10 relative right-6"
+                src="/assets/icons/btn-circle.svg"
+                alt="btn-circle"
+              />
+            </button>
+          </a>
+        </div>
+        <div class="flex items-center justify-center">
+          <img
+            class="w-[45vw]"
+            src="/assets/images/services-image-cyber.png"
+            alt="Services Item2"
+          />
         </div>
       </div>
     </section>
