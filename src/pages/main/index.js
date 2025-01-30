@@ -3,6 +3,7 @@ const languageBtn = document.getElementById("language-dropdown-btn");
 const languageMenu = document.getElementById("language-dropdown-menu");
 const mobileMenu = document.getElementById("navbar-language");
 import { setupDarkModeToggle } from "../../components/darkModeToggle.js";
+import "../../components/Swiper.js";
 
 setupDarkModeToggle();
 

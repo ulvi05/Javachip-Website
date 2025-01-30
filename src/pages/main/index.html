@@ -10,12 +10,17 @@
       href="/assets/images/javachip-favicon.ico"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="./index.js" type="module" defer></script>
     <script
       src="../../components/darkModeToggle.js"
       type="module"
       defer
     ></script>
+    <script type="module" src="../../components/Swiper.js" defer></script>
   </head>
   <body
     class="text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white"
@@ -112,7 +117,7 @@
         <!-- Mobile Menu -->
         <div
           id="navbar-language"
-          class="absolute left-0 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 md:hidden dark:bg-gray-800 dark:border-gray-700"
+          class="absolute left-0 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
         >
           <ul class="flex flex-col p-4 space-y-2">
             <li>
@@ -259,42 +264,43 @@
       class="relative p-4 text-black bg-gray-50 dark:bg-black dark:text-white"
     >
       <h1
-        class="pt-16 text-4xl font-bold text-center lg:text-8xl md:text-6xl dark:text-[#3bbeef] text-[#159939]"
+        class="md:pt-16 pt-8 text-4xl font-bold text-center lg:text-8xl md:text-6xl dark:text-[#3bbeef] text-[#159939]"
       >
         Our Services
       </h1>
       <div
-        class="bg-[#3bbeef33] absolute bottom-0 h-[90%] left-[49%] w-0.5"
+        class="bg-[#3bbeef33] absolute bottom-0 h-[90%] left-[49%] w-0.5 hidden lg:block"
       ></div>
+
       <!-- Service Item Web -->
-      <div class="flex items-center justify-around">
-        <div class="flex items-center justify-center">
+      <div class="flex flex-col items-center justify-around mb-16 lg:flex-row">
+        <div class="flex items-center justify-center w-full md:w-[45vw]">
           <img
-            class="w-[45vw]"
+            class="w-full"
             src="/assets/images/services-image-web.png"
             alt="Services Item"
           />
         </div>
-        <div class="flex flex-col items-center mb-16">
-          <div class="flex flex-col justify-center pt-[20%] w-[40vw]">
-            <h3 class="dark:text-[#3bbeef] text-[#159939] text-6xl">
-              Web Development
-            </h3>
-            <p class="text-3xl font-bold mt-1.5 dark:text-white text-black">
-              Step into the Future with a Website That Wows
-            </p>
-            <p class="text-xl font-light text-black dark:text-white mt-1.5">
-              Say goodbye to the yellow pages because, in the digital age,
-              people don't reach for the phonebook when they need to find a
-              business. They reach for their smartphones. With a well-designed
-              and user-friendly website, you can showcase your products and
-              services in the best possible light. Now picture that you've just
-              launched your brand new website and the traffic is flooding in.
-              Your customers are amazed by the design, lightning-fast load
-              times, and effortless user experience. This is the kind of website
-              we can build for you.
-            </p>
-          </div>
+        <div
+          class="flex flex-col items-center justify-center md:text-left w-full md:w-[40vw] mt-8 md:mt-0"
+        >
+          <h3 class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl">
+            Web Development
+          </h3>
+          <p class="text-2xl font-bold mt-1.5 dark:text-white text-black">
+            Step into the Future with a Website That Wows
+          </p>
+          <p class="text-lg font-light text-black dark:text-white mt-1.5">
+            Say goodbye to the yellow pages because, in the digital age, people
+            don't reach for the phonebook when they need to find a business.
+            They reach for their smartphones. With a well-designed and
+            user-friendly website, you can showcase your products and services
+            in the best possible light. Now picture that you've just launched
+            your brand new website and the traffic is flooding in. Your
+            customers are amazed by the design, lightning-fast load times, and
+            effortless user experience. This is the kind of website we can build
+            for you.
+          </p>
           <a href="/src/pages/services/index.html">
             <button
               class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
@@ -318,14 +324,19 @@
           </a>
         </div>
       </div>
+
       <!-- Service Item Mobile -->
-      <div class="flex items-center justify-around">
+      <div
+        class="flex flex-col-reverse items-center justify-around lg:flex-row"
+      >
         <div class="flex flex-col items-center mb-16">
-          <div class="flex flex-col justify-center pt-[20%] w-[40vw]">
-            <h3 class="dark:text-[#3bbeef] text-[#159939] text-6xl">
+          <div
+            class="flex flex-col items-center justify-center lg:text-left w-full lg:w-[40vw] mt-8 lg:mt-0"
+          >
+            <h3 class="dark:text-[#3bbeef] text-[#159939] text-4xl lg:text-6xl">
               Mobile App Development
             </h3>
-            <p class="text-3xl font-bold mt-1.5 dark:text-white text-black">
+            <p class="text-2xl font-bold mt-1.5 dark:text-white text-black">
               Put Your Business in the Palm of Their Hand
             </p>
             <p class="text-xl font-light text-black dark:text-white mt-1.5">
@@ -370,35 +381,36 @@
           />
         </div>
       </div>
+
       <!-- Service Item AI -->
-      <div class="flex items-center justify-around">
-        <div class="flex items-center justify-center">
+      <div class="flex flex-col justify-around mb-16 lg:flex-row">
+        <div class="flex items-center justify-center w-full md:w-[45vw]">
           <img
-            class="w-[45vw]"
+            class="w-full p-12"
             src="/assets/images/services-image-ai.png"
             alt="Services Item"
           />
         </div>
-        <div class="flex flex-col items-center mb-16">
-          <div class="flex flex-col justify-center pt-[20%] w-[40vw]">
-            <h3 class="dark:text-[#3bbeef] text-[#159939] text-6xl">
-              Artificial Intelligence
-            </h3>
-            <p class="text-3xl font-bold mt-1.5 dark:text-white text-black">
-              Future-Proof Your Business and Stay Ahead of the Competition
-            </p>
-            <p class="text-xl font-light text-black dark:text-white mt-1.5">
-              Imagine this: A business that runs like a well-oiled machine, with
-              AI taking care of the tedious tasks and freeing up time for you to
-              focus on growth and innovation. A business that has access to
-              valuable insights and can make informed decisions that drive
-              success. Artificial Intelligence is no longer a thing of the
-              future - it's here, and it's changing the way we do business. Our
-              AI solutions will help you streamline your processes, enhance your
-              customer experience, and gain valuable insights into your
-              business. Let's harness the power of AI today!
-            </p>
-          </div>
+        <div
+          class="flex flex-col items-center justify-center md:text-left w-full md:w-[40vw] mt-8 md:mt-0"
+        >
+          <h3 class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl">
+            Artificial Intelligence
+          </h3>
+          <p class="text-2xl font-bold mt-1.5 dark:text-white text-black">
+            Future-Proof Your Business and Stay Ahead of the Competition
+          </p>
+          <p class="text-lg font-light text-black dark:text-white mt-1.5">
+            Imagine this: A business that runs like a well-oiled machine, with
+            AI taking care of the tedious tasks and freeing up time for you to
+            focus on growth and innovation. A business that has access to
+            valuable insights and can make informed decisions that drive
+            success. Artificial Intelligence is no longer a thing of the future
+            - it's here, and it's changing the way we do business. Our AI
+            solutions will help you streamline your processes, enhance your
+            customer experience, and gain valuable insights into your business.
+            Let's harness the power of AI today!
+          </p>
           <a href="/src/pages/services/index.html">
             <button
               class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
@@ -422,14 +434,19 @@
           </a>
         </div>
       </div>
+
       <!-- Service Item Cyber -->
-      <div class="flex items-center justify-around">
+      <div
+        class="flex flex-col-reverse items-center justify-around lg:flex-row"
+      >
         <div class="flex flex-col items-center mb-16">
-          <div class="flex flex-col justify-center pt-[20%] w-[40vw]">
-            <h3 class="dark:text-[#3bbeef] text-[#159939] text-6xl">
+          <div
+            class="flex flex-col items-center justify-center lg:text-left w-full lg:w-[40vw] mt-8 lg:mt-0"
+          >
+            <h3 class="dark:text-[#3bbeef] text-[#159939] text-4xl lg:text-6xl">
               Cyber Security
             </h3>
-            <p class="text-3xl font-bold mt-1.5 dark:text-white text-black">
+            <p class="text-2xl font-bold mt-1.5 dark:text-white text-black">
               Sleep Soundly at Night with Cyber Security That's Got Your Back
             </p>
             <p class="text-xl font-light text-black dark:text-white mt-1.5">
@@ -465,12 +482,125 @@
         </div>
         <div class="flex items-center justify-center">
           <img
-            class="w-[45vw]"
+            class="w-full p-12 md:w-[30vw]"
             src="/assets/images/services-image-cyber.png"
             alt="Services Item2"
           />
         </div>
       </div>
     </section>
+
+    <section class="pt-16 text-black bg-white dark:bg-black dark:text-white">
+      <h1
+        class="text-4xl font-bold text-center lg:text-8xl md:text-6xl dark:text-[#3bbeef] text-[#159939]"
+      >
+        Digital Marketing
+      </h1>
+
+      <!-- Swiper Container -->
+      <div class="relative w-full mt-16 overflow-hidden">
+        <div class="w-screen px-4 swiper md:px-12">
+          <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="flex-shrink-0 swiper-slide card">
+              <div class="relative flex flex-col p-6 md:p-12">
+                <h1
+                  class="text-[#159939] dark:text-[#3bbeef] text-4xl md:text-6xl font-medium absolute top-2 md:top-6 left-0 tracking-[0.075em] z-10"
+                >
+                  SMM
+                </h1>
+                <div
+                  class="flex flex-col items-center mt-12 md:flex-row md:justify-evenly"
+                >
+                  <img
+                    class="hidden mr-4 md:block"
+                    src="/assets/icons/bracket.svg"
+                    alt="bracket"
+                  />
+                  <div class="max-w-full md:max-w-60">
+                    <h2 class="font-bold md:text-2xl dark:text-black">
+                      Reach out to your potential customers and increase your
+                      sales
+                    </h2>
+                    <p class="dark:text-black">
+                      Social media platforms are the easiest way to reach out to
+                      potential customers and spread awareness about your
+                      company.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex-shrink-0 swiper-slide card">
+              <div class="relative flex flex-col p-6 md:p-12">
+                <h1
+                  class="text-[#159939] dark:text-[#3bbeef] text-4xl md:text-6xl font-medium absolute top-2 md:top-6 left-0 tracking-[0.075em] z-10"
+                >
+                  SEO
+                </h1>
+                <div
+                  class="flex flex-col items-center mt-12 md:flex-row md:justify-evenly"
+                >
+                  <img
+                    class="hidden mr-4 md:block"
+                    src="/assets/icons/bracket.svg"
+                    alt="bracket"
+                  />
+                  <div class="max-w-full md:max-w-60">
+                    <h2 class="font-bold md:text-2xl dark:text-black">
+                      Optimize your website and generate organic traffic
+                    </h2>
+                    <p class="dark:text-black">
+                      Search engine optimization is a process of optimizing your
+                      website to rank higher in search engine results pages.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex-shrink-0 swiper-slide card">
+              <div class="relative flex flex-col p-6 md:p-12">
+                <h1
+                  class="text-[#159939] dark:text-[#3bbeef] text-4xl md:text-6xl font-medium absolute top-2 md:top-6 left-0 tracking-[0.075em] z-10"
+                >
+                  SEM
+                </h1>
+                <div
+                  class="flex flex-col items-center mt-12 md:flex-row md:justify-evenly"
+                >
+                  <img
+                    class="hidden mr-4 md:block"
+                    src="/assets/icons/bracket.svg"
+                    alt="bracket"
+                  />
+                  <div class="max-w-full md:max-w-60">
+                    <h2 class="font-bold md:text-2xl dark:text-black">
+                      Increase your Brand Awareness
+                    </h2>
+                    <p class="dark:text-black">
+                      SEM is the online advertising that is used to increase the
+                      visibility of a website on search engine result pages.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
