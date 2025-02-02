@@ -21,9 +21,10 @@
       defer
     ></script>
     <script type="module" src="../../components/Swiper.js" defer></script>
+    <script type="module" src="../../components/iconSwiper.js" defer></script>
   </head>
   <body
-    class="text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white"
+    class="text-black transition-colors duration-300 bg-gray-50 dark:bg-black dark:text-white"
   >
     <nav class="relative bg-white border-gray-200 dark:bg-gray-900">
       <div
@@ -154,6 +155,9 @@
             </li>
           </ul>
         </div>
+
+        <!-- Desktop Menu -->
+
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-language"
@@ -164,7 +168,7 @@
             <li>
               <a
                 href="/src/pages/main/index.html"
-                class="block px-3 py-2 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                class="block px-3 py-2 tracking-[0.5px] relative text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                 aria-current="page"
               >
                 Home
@@ -173,7 +177,7 @@
             <li>
               <a
                 href="/src/pages/portfolio/index.html"
-                class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Portfolio
               </a>
@@ -181,7 +185,7 @@
             <li>
               <a
                 href="/src/pages/about/index.html"
-                class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 About
               </a>
@@ -189,7 +193,7 @@
             <li>
               <a
                 href="/src/pages/services/index.html"
-                class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Services
               </a>
@@ -197,7 +201,7 @@
             <li>
               <a
                 href="/src/pages/privacy/index.html"
-                class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Privacy Policy
               </a>
@@ -205,7 +209,7 @@
             <li>
               <a
                 href="/src/pages/faq/index.html"
-                class="block px-3 py-2 text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 FAQs
               </a>
@@ -219,7 +223,7 @@
       class="px-4 py-32 text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white md:px-0"
     >
       <div
-        class="grid items-center max-w-6xl grid-cols-1 gap-8 mx-auto md:grid-cols-2"
+        class="grid items-center max-w-6xl grid-cols-1 gap-8 mx-auto lg:grid-cols-2"
       >
         <div>
           <h1
@@ -274,7 +278,7 @@
 
       <!-- Service Item Web -->
       <div class="flex flex-col items-center justify-around mb-16 lg:flex-row">
-        <div class="flex items-center justify-center w-full md:w-[45vw]">
+        <div class="flex items-center justify-center w-full p-5 md:w-[45vw]">
           <img
             class="w-full"
             src="/assets/images/services-image-web.png"
@@ -282,12 +286,16 @@
           />
         </div>
         <div
-          class="flex flex-col items-center justify-center md:text-left w-full md:w-[40vw] mt-8 md:mt-0"
+          class="flex flex-col justify-center md:text-left w-full lg:w-[40vw] mt-8 md:mt-0 pt-[15%]"
         >
-          <h3 class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl">
+          <h3
+            class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl font-bold"
+          >
             Web Development
           </h3>
-          <p class="text-2xl font-bold mt-1.5 dark:text-white text-black">
+          <p
+            class="text-2xl md:text-4xl font-bold mt-1.5 dark:text-white text-black"
+          >
             Step into the Future with a Website That Wows
           </p>
           <p class="text-lg font-light text-black dark:text-white mt-1.5">
@@ -301,7 +309,10 @@
             effortless user experience. This is the kind of website we can build
             for you.
           </p>
-          <a href="/src/pages/services/index.html">
+          <a
+            href="/src/pages/services/index.html"
+            class="flex items-center justify-center"
+          >
             <button
               class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
             >
@@ -329,14 +340,18 @@
       <div
         class="flex flex-col-reverse items-center justify-around lg:flex-row"
       >
-        <div class="flex flex-col items-center mb-16">
+        <div class="flex flex-col mb-16">
           <div
-            class="flex flex-col items-center justify-center lg:text-left w-full lg:w-[40vw] mt-8 lg:mt-0"
+            class="flex flex-col justify-center lg:text-left w-full lg:w-[40vw] mt-8 lg:mt-0 pt-[15%]"
           >
-            <h3 class="dark:text-[#3bbeef] text-[#159939] text-4xl lg:text-6xl">
+            <h3
+              class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl font-bold"
+            >
               Mobile App Development
             </h3>
-            <p class="text-2xl font-bold mt-1.5 dark:text-white text-black">
+            <p
+              class="text-2xl md:text-4xl font-bold mt-1.5 dark:text-white text-black"
+            >
               Put Your Business in the Palm of Their Hand
             </p>
             <p class="text-xl font-light text-black dark:text-white mt-1.5">
@@ -351,7 +366,10 @@
               their friends and family about your business!
             </p>
           </div>
-          <a href="/src/pages/services/index.html">
+          <a
+            href="/src/pages/services/index.html"
+            class="flex items-center justify-center"
+          >
             <button
               class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
             >
@@ -384,7 +402,7 @@
 
       <!-- Service Item AI -->
       <div class="flex flex-col justify-around mb-16 lg:flex-row">
-        <div class="flex items-center justify-center w-full md:w-[45vw]">
+        <div class="flex items-center justify-center w-full lg:w-[45vw]">
           <img
             class="w-full p-12"
             src="/assets/images/services-image-ai.png"
@@ -392,12 +410,16 @@
           />
         </div>
         <div
-          class="flex flex-col items-center justify-center md:text-left w-full md:w-[40vw] mt-8 md:mt-0"
+          class="flex flex-col justify-center w-full lg:w-[40vw] mt-8 lg:mt-0 pt-[15%]"
         >
-          <h3 class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl">
+          <h3
+            class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl font-bold"
+          >
             Artificial Intelligence
           </h3>
-          <p class="text-2xl font-bold mt-1.5 dark:text-white text-black">
+          <p
+            class="text-2xl md:text-4xl font-bold mt-1.5 dark:text-white text-black"
+          >
             Future-Proof Your Business and Stay Ahead of the Competition
           </p>
           <p class="text-lg font-light text-black dark:text-white mt-1.5">
@@ -411,7 +433,10 @@
             customer experience, and gain valuable insights into your business.
             Let's harness the power of AI today!
           </p>
-          <a href="/src/pages/services/index.html">
+          <a
+            href="/src/pages/services/index.html"
+            class="flex items-center justify-center"
+          >
             <button
               class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
             >
@@ -439,14 +464,18 @@
       <div
         class="flex flex-col-reverse items-center justify-around lg:flex-row"
       >
-        <div class="flex flex-col items-center mb-16">
+        <div class="flex flex-col mb-16">
           <div
-            class="flex flex-col items-center justify-center lg:text-left w-full lg:w-[40vw] mt-8 lg:mt-0"
+            class="flex flex-col justify-center lg:text-left w-full lg:w-[40vw] mt-8 lg:mt-0 pt-[15%]"
           >
-            <h3 class="dark:text-[#3bbeef] text-[#159939] text-4xl lg:text-6xl">
+            <h3
+              class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl font-bold"
+            >
               Cyber Security
             </h3>
-            <p class="text-2xl font-bold mt-1.5 dark:text-white text-black">
+            <p
+              class="text-2xl md:text-4xl font-bold mt-1.5 dark:text-white text-black"
+            >
               Sleep Soundly at Night with Cyber Security That's Got Your Back
             </p>
             <p class="text-xl font-light text-black dark:text-white mt-1.5">
@@ -458,7 +487,10 @@
               mind and protect your business with our Cyber Security services.
             </p>
           </div>
-          <a href="/src/pages/services/index.html">
+          <a
+            href="/src/pages/services/index.html"
+            class="flex items-center justify-center"
+          >
             <button
               class="dark:text-[#3bbeef] text-[#159939] text-3xl m-6 flex items-center"
             >
@@ -490,7 +522,7 @@
       </div>
     </section>
 
-    <section class="pt-16 text-black bg-white dark:bg-black dark:text-white">
+    <section class="pt-16 text-black bg-gray-50 dark:bg-black dark:text-white">
       <h1
         class="text-4xl font-bold text-center lg:text-8xl md:text-6xl dark:text-[#3bbeef] text-[#159939]"
       >
@@ -503,7 +535,7 @@
           <div class="swiper-wrapper">
             <!-- Card 1 -->
             <div class="flex-shrink-0 swiper-slide card">
-              <div class="relative flex flex-col p-6 md:p-12">
+              <div class="relative flex flex-col p-6 md:p-8">
                 <h1
                   class="text-[#159939] dark:text-[#3bbeef] text-4xl md:text-6xl font-medium absolute top-2 md:top-6 left-0 tracking-[0.075em] z-10"
                 >
@@ -534,7 +566,7 @@
 
             <!-- Card 2 -->
             <div class="flex-shrink-0 swiper-slide card">
-              <div class="relative flex flex-col p-6 md:p-12">
+              <div class="relative flex flex-col p-6 md:p-8">
                 <h1
                   class="text-[#159939] dark:text-[#3bbeef] text-4xl md:text-6xl font-medium absolute top-2 md:top-6 left-0 tracking-[0.075em] z-10"
                 >
@@ -563,7 +595,7 @@
 
             <!-- Card 3 -->
             <div class="flex-shrink-0 swiper-slide card">
-              <div class="relative flex flex-col p-6 md:p-12">
+              <div class="relative flex flex-col p-6 md:p-8">
                 <h1
                   class="text-[#159939] dark:text-[#3bbeef] text-4xl md:text-6xl font-medium absolute top-2 md:top-6 left-0 tracking-[0.075em] z-10"
                 >
@@ -601,6 +633,89 @@
       </div>
     </section>
 
+    <section
+      class="flex flex-col items-center justify-center pt-6 bg-gray-50 dark:bg-black dark:text-white"
+    >
+      <h1
+        class="text-[#989b09] text-5xl md:text-7xl pt-8 text-center tracking-tight font-bold"
+      >
+        Technologies we use
+      </h1>
+      <p class="max-w-4xl p-12 text-lg md:text-2xl">
+        We're always on the hunt for new technologies that can help us work
+        smarter, faster, better and we're always pushing the boundaries of
+        what's possible.
+      </p>
+      <div
+        class="text-black bg-gray-50 icon-slider-swiper dark:bg-black dark:text-white"
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/images/java.png" alt="Java" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/jQuery.png" alt="jQuery" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/javascript.png" alt="JavaScript" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/kotlin.png" alt="Kotlin" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/mongodb.png" alt="MongoDB" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/mySQL.png" alt="MySQL" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/nodejs.png" alt="Node.js" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/react.png" alt="React" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/react-native.png" alt="React Native" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/apachecordova.png" alt="Apache Cordova" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/angular.png" alt="Angular" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/ionic.png" alt="Ionic" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/ios.png" alt="IOS" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/swift.png" alt="Swift" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/firebase.png" alt="Firebase" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/html.png" alt="HTML" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/css.png" alt="CSS" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/php.png" alt="php" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/SqLite.png" alt="SqLite" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/RxJs.png" alt="RxJs" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/XCode.png" alt="XCode" />
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

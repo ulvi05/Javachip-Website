@@ -70,7 +70,7 @@ body {
   justify-content: space-between;
   padding: 20px;
   height: 100%;
-  background-color: white;
+  background-color: #f9fafb;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -95,6 +95,35 @@ body {
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon-slider-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.icon-slider-swiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.icon-slider-swiper .swiper-slide {
+  flex-shrink: 0;
+  width: auto;
+  text-align: center;
+}
+
+.icon-slider-swiper .swiper-slide img {
+  @apply w-24 h-24 object-contain transition ease-in-out duration-300;
+}
+
+.dark .icon-slider-swiper .swiper-slide img {
+  @apply grayscale;
+}
+
+.dark .icon-slider-swiper .swiper-slide img:hover {
+  @apply grayscale-0;
 }
 
 ::-webkit-scrollbar {
