@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="select-none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,9 +22,10 @@
     ></script>
     <script type="module" src="../../components/Swiper.js" defer></script>
     <script type="module" src="../../components/iconSwiper.js" defer></script>
+    <script type="module" src="../../components/liveClock.js" defer></script>
   </head>
   <body
-    class="text-black transition-colors duration-300 bg-gray-50 dark:bg-black dark:text-white"
+    class="text-black transition-colors duration-300 bg-gray-50 dark:bg-black dark:text-white font-manrope"
   >
     <nav class="relative bg-white border-gray-200 dark:bg-gray-900">
       <div
@@ -529,11 +530,9 @@
         Digital Marketing
       </h1>
 
-      <!-- Swiper Container -->
       <div class="relative w-full mt-16 overflow-hidden">
         <div class="w-screen px-4 swiper md:px-12">
           <div class="swiper-wrapper">
-            <!-- Card 1 -->
             <div class="flex-shrink-0 swiper-slide card">
               <div class="relative flex flex-col p-6 md:p-8">
                 <h1
@@ -564,7 +563,6 @@
               </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="flex-shrink-0 swiper-slide card">
               <div class="relative flex flex-col p-6 md:p-8">
                 <h1
@@ -593,7 +591,6 @@
               </div>
             </div>
 
-            <!-- Card 3 -->
             <div class="flex-shrink-0 swiper-slide card">
               <div class="relative flex flex-col p-6 md:p-8">
                 <h1
@@ -626,9 +623,6 @@
           <!-- Navigation Arrows -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-
-          <!-- Pagination -->
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -716,6 +710,242 @@
         </div>
       </div>
     </section>
+
+    <section class="pt-16 text-black bg-gray-50 dark:bg-black dark:text-white">
+      <h1
+        class="text-4xl font-bold text-center lg:text-8xl md:text-6xl dark:text-white text-[#159939]"
+      >
+        Blog
+      </h1>
+
+      <div class="mt-20 swiper blog-swiper">
+        <div class="swiper-wrapper">
+          <div
+            class="!flex flex-col items-center justify-center text-center swiper-slide"
+          >
+            <a
+              href="/src/pages/blog/index.html"
+              class="flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="flex items-center justify-center w-64 h-64 border-8 border-green-500 rounded-full"
+              >
+                <img
+                  src="/assets/images/blog-img1.jpg"
+                  alt="Mobile App"
+                  class="object-cover w-56 h-56 rounded-full"
+                />
+              </div>
+              <h2
+                class="w-full px-4 mt-2 text-lg font-bold text-center break-words dark:text-white te"
+              >
+                6 Key Benefits of a Mobile App to Your Business
+              </h2>
+            </a>
+          </div>
+
+          <div
+            class="!flex flex-col items-center justify-center text-center swiper-slide"
+          >
+            <a
+              href="/src/pages/blog/index.html"
+              class="flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="flex items-center justify-center w-64 h-64 border-8 border-blue-500 rounded-full"
+              >
+                <img
+                  src="/assets/images/blog-img2.jpg"
+                  alt="SEO"
+                  class="object-cover w-56 h-56 rounded-full"
+                />
+              </div>
+              <h2
+                class="w-full px-4 mt-2 text-lg font-bold text-center break-words dark:text-white te"
+              >
+                What is SEO? Learn SEO in 9 Steps
+              </h2>
+            </a>
+          </div>
+
+          <div
+            class="!flex flex-col items-center justify-center text-center swiper-slide"
+          >
+            <a
+              href="/src/pages/blog/index.html"
+              class="flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="flex items-center justify-center w-64 h-64 border-8 border-green-500 rounded-full"
+              >
+                <img
+                  src="/assets/images/blog-img3.jpg"
+                  alt="Web Design"
+                  class="object-cover w-56 h-56 rounded-full"
+                />
+              </div>
+              <h2
+                class="w-full px-4 mt-2 text-lg font-bold text-center break-words dark:text-white te"
+              >
+                10 Most Popular Types of Websites
+              </h2>
+            </a>
+          </div>
+
+          <div
+            class="!flex flex-col items-center justify-center text-center swiper-slide"
+          >
+            <a
+              href="/src/pages/blog/index.html"
+              class="flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="flex items-center justify-center w-64 h-64 border-8 border-red-500 rounded-full"
+              >
+                <img
+                  src="/assets/images/blog-img4.jpg"
+                  alt="AI Chatbot"
+                  class="object-cover w-56 h-56 rounded-full"
+                />
+              </div>
+              <h2
+                class="w-full px-4 mt-2 text-lg font-bold text-center break-words dark:text-white te"
+              >
+                What is an AI Chatbot?
+              </h2>
+            </a>
+          </div>
+
+          <div
+            class="!flex flex-col items-center justify-center text-center swiper-slide"
+          >
+            <a
+              href="/src/pages/blog/index.html"
+              class="flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="flex items-center justify-center w-64 h-64 border-8 border-purple-500 rounded-full"
+              >
+                <img
+                  src="/assets/images/blog-img5.jpg"
+                  alt="Marketing"
+                  class="object-cover w-56 h-56 rounded-full"
+                />
+              </div>
+              <h2
+                class="w-full px-4 mt-2 text-lg font-bold text-center break-words dark:text-white te"
+              >
+                6 Reasons Why Your Restaurant Must Have Its Own Website
+              </h2>
+            </a>
+          </div>
+
+          <div
+            class="!flex flex-col items-center justify-center text-center swiper-slide"
+          >
+            <a
+              href="/src/pages/blog/index.html"
+              class="flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="flex items-center justify-center w-64 h-64 border-8 border-yellow-500 rounded-full"
+              >
+                <img
+                  src="/assets/images/blog-img6.jpg"
+                  alt="AI Technology"
+                  class="object-cover w-56 h-56 rounded-full"
+                />
+              </div>
+              <h2
+                class="w-full px-4 mt-2 text-lg font-bold text-center text-black break-words dark:text-white"
+              >
+                What is ERP?
+              </h2>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-white swiper-button-next"></div>
+        <div class="text-white swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <section
+      class="px-4 pt-12 text-black bg-gray-50 dark:bg-black dark:text-white"
+    >
+      <div class="flex flex-col items-center justify-center text-center">
+        <h1
+          class="text-[#159939] text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-[1100px] font-manrope font-medium p-2 sm:p-4"
+        >
+          Improve your digital presence, Get more leads, and Boost your business
+        </h1>
+        <h3
+          class="mt-2 mb-2 text-sm text-black sm:mt-4 sm:mb-4 sm:text-base md:text-lg lg:text-2xl font-manrope dark:text-white"
+        >
+          Do not waste your time
+        </h3>
+
+        <a
+          href="/src/pages/contact/index.html"
+          class="group w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] mt-4 border-2 py-6 px-4 sm:p-8 border-[#159939] flex items-center justify-center rounded-full bg-white dark:bg-black hover:bg-[#159939] dark:hover:bg-white transition-all duration-500 hover:cursor-pointer"
+        >
+          <span
+            id="clock"
+            class="text-4xl sm:text-5xl md:text-6xl font-bold text-[#159939] font-manrope group-hover:text-white dark:group-hover:text-[#159939]"
+          >
+            00:00:00
+          </span>
+        </a>
+
+        <h3
+          class="mt-4 mb-4 text-xl font-bold text-black dark:text-white sm:mt-6 sm:mb-6 sm:text-2xl lg:text-3xl"
+        >
+          Click o’clock and send us your wish list
+        </h3>
+      </div>
+    </section>
+
+    <div>
+      <div
+        class="h-[26vh] bg-black rounded-bl-[20%] rounded-br-[20%] absolute w-full"
+      ></div>
+      <footer
+        class="grid grid-cols-[.75fr,1fr,1fr,1fr] grid-rows-[1fr,1fr,.25fr] bg-white pt-64"
+      >
+        <div class="mb-12 lg:grid-rows-1">
+          <a href="/src/pages/main/index.html">
+            <img src="/assets/icons/javachip-logo.svg" alt="Javachip" />
+          </a>
+          <p class="ml-6 text-[#159939] font-bold text-xl">
+            Your Digital Partner
+          </p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="">Our Services</a>
+            </li>
+            <li>
+              <a href=""> Portfolio </a>
+            </li>
+            <li>
+              <a href="">About Us</a>
+            </li>
+            <li>
+              <a href="">Contact Us</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="">FAQs</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
