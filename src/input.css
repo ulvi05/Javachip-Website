@@ -141,3 +141,8 @@ body {
     rgba(59, 190, 239, 1) 100%
   );
 }
+
+.active-page {
+  color: #1d4ed8 !important;
+  font-weight: bold;
+}

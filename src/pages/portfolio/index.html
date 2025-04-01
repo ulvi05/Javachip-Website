@@ -1,13 +1,946 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="select-none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Page</title>
     <link href="../../output.css" rel="stylesheet" />
-    <script src="./index.js"></script>
+    <link
+      rel="shortcut icon"
+      href="/assets/images/javachip-favicon.ico"
+      type="image/x-icon"
+    />
+    <script
+      src="../../components/darkModeToggle.js"
+      type="module"
+      defer
+    ></script>
+    <script defer type="module" src="./index.js"></script>
+    <script defer type="module" src="../../components/nav.js"></script>
   </head>
-  <body>
-    <h1>Portfolio</h1>
+  <body
+    class="text-black transition-colors duration-300 bg-gray-50 !dark:bg-black dark:text-white font-manrope"
+  >
+    <nav class="sticky top-0 z-50 bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="flex items-center justify-between max-w-screen-xl gap-6 p-4 mx-auto"
+      >
+        <div class="lg:w-fit">
+          <a href="/src/pages/main/index.html">
+            <img
+              src="/assets/icons/javachip-logo.svg"
+              alt="The Javachip Logo"
+              class="h-[50px] md:h-[60px] lg:h-[81px] object-contain"
+            />
+          </a>
+        </div>
+        <div
+          class="flex items-center space-x-2 md:order-2 md:space-x-4 rtl:space-x-reverse"
+        >
+          <div id="toggle" class="mr-2 toggle"></div>
+          <div class="relative">
+            <button
+              type="button"
+              id="language-dropdown-btn"
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-900 rounded-lg cursor-pointer dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+            >
+              <img
+                class="w-5 h-5 rounded-full me-3"
+                src="/assets/images/en-flag.png"
+                alt="en"
+              />
+              English
+            </button>
+            <div
+              id="language-dropdown-menu"
+              class="absolute right-0 z-50 hidden w-40 mt-2 bg-white rounded-lg shadow-lg dark:bg-gray-800"
+            >
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                <li>
+                  <a
+                    href="#"
+                    class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <img
+                      class="w-5 h-5 rounded-full me-3"
+                      src="/assets/images/en-flag.png"
+                      alt="en"
+                    />
+                    English
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <img
+                      class="w-5 h-5 rounded-full me-3"
+                      src="/assets/images/az-flag.png"
+                      alt="en"
+                    />
+                    Azerbaijani
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <img
+                      class="w-5 h-5 rounded-full me-3"
+                      src="/assets/images/ru-flag.png"
+                      alt="en"
+                    />
+                    Russian
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button
+            id="menu-btn"
+            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          >
+            <img
+              id="burger-icon"
+              src="/assets/icons/burger-black.svg"
+              alt="burger"
+            />
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="navbar-language"
+          class="absolute left-0 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <ul class="flex flex-col p-4 space-y-2">
+            <li>
+              <a
+                href="/src/pages/main/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/portfolio/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/about/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/services/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                Services
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Desktop Menu -->
+
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-language"
+        >
+          <ul
+            class="flex-col hidden p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:items-center md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 lg:flex"
+          >
+            <li>
+              <a
+                href="/src/pages/main/index.html"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/portfolio/index.html"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/about/index.html"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/services/index.html"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/privacy/index.html"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/faq/index.html"
+                class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                FAQs
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="flex flex-col items-center justify-center p-20 text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white md:px-0"
+    >
+      <div>
+        <h1
+          class="text-2xl font-bold text-center lg:text-8xl md:text-6xl dark:text-[#3bbeef] text-[#159939]"
+        >
+          Our Projects
+        </h1>
+      </div>
+
+      <div class="grid w-full max-w-6xl grid-cols-1 gap-16 mt-12">
+        <!-- Horeca -->
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
+          >
+            <div class="lg:w-[40%] text-end">
+              <h2
+                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                Horeca
+              </h2>
+              <p
+                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                We developed a website for "Horeca", one of the leading
+                companies in the cleaning industry.
+              </p>
+
+              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+                <a
+                  target="_blank"
+                  href="https://horeca.com.az"
+                  class="flex items-center justify-center"
+                >
+                  <button
+                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                  >
+                    <div
+                      class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                    >
+                      <p class="pr-2">View project</p>
+                      <img
+                        class="lg:w-[40px] md:w-[30px] w-5"
+                        src="/assets/icons/arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <img
+                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      src="/assets/icons/btn-circle.svg"
+                      alt="btn-circle"
+                    />
+                  </button>
+                </a>
+                <span
+                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                >
+                  Web development
+                </span>
+              </div>
+            </div>
+
+            <div class="lg:w-[50%]">
+              <img
+                src="/assets/images/horeca.png"
+                alt="Horeca Website"
+                class="object-cover w-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Wide Travel -->
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
+          >
+            <div class="lg:w-[50%] lg:order-1">
+              <img
+                src="/assets/images/wide-travel.png"
+                alt="Wide Travel"
+                class="object-cover w-full rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div class="lg:w-[40%] lg:order-2 text-start">
+              <h2
+                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                Wide Travel
+              </h2>
+              <p
+                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                We developed a website for the tourism company "Wide Travel".
+              </p>
+
+              <div class="flex flex-col items-start justify-end gap-4 mt-4">
+                <a
+                  target="_blank"
+                  href="https://wide-travel.com"
+                  class="flex items-center justify-center"
+                >
+                  <button
+                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                  >
+                    <div
+                      class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                    >
+                      <p class="pr-2">View project</p>
+                      <img
+                        class="lg:w-[40px] md:w-[30px] w-5"
+                        src="/assets/icons/arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <img
+                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      src="/assets/icons/btn-circle.svg"
+                      alt="btn-circle"
+                    />
+                  </button>
+                </a>
+                <span
+                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                >
+                  Web development
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avtobus Website -->
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
+          >
+            <div class="lg:w-[40%] text-end">
+              <h2
+                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                Avtobus
+              </h2>
+              <p
+                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                We provided back-end service for "Avtobus", one of the leading
+                companies in the field of passenger transportation.
+              </p>
+
+              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+                <a
+                  target="_blank"
+                  href="https://avtobus.az"
+                  class="flex items-center justify-center"
+                >
+                  <button
+                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                  >
+                    <div
+                      class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                    >
+                      <p class="pr-2">View project</p>
+                      <img
+                        class="lg:w-[40px] md:w-[30px] w-5"
+                        src="/assets/icons/arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <img
+                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      src="/assets/icons/btn-circle.svg"
+                      alt="btn-circle"
+                    />
+                  </button>
+                </a>
+                <span
+                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                >
+                  Web development
+                </span>
+              </div>
+            </div>
+
+            <div class="lg:w-[50%]">
+              <img
+                src="/assets/images/avtobus-website.png"
+                alt="Avtobus Website"
+                class="object-cover w-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Azstandart Service -->
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
+          >
+            <div class="lg:w-[50%] lg:order-1">
+              <img
+                src="/assets/images/az-standart.png"
+                alt="Azstandart Service"
+                class="object-cover w-full rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div class="lg:w-[40%] lg:order-2 text-start">
+              <h2
+                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                Azstandart Service
+              </h2>
+              <p
+                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                We built a website for standardization and patenting agency,
+                "Azstandart Service".
+              </p>
+
+              <div class="flex flex-col items-start justify-end gap-4 mt-4">
+                <a
+                  target="_blank"
+                  href="https://www.azstandart.az"
+                  class="flex items-center justify-center"
+                >
+                  <button
+                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                  >
+                    <div
+                      class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                    >
+                      <p class="pr-2">View project</p>
+                      <img
+                        class="lg:w-[40px] md:w-[30px] w-5"
+                        src="/assets/icons/arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <img
+                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      src="/assets/icons/btn-circle.svg"
+                      alt="btn-circle"
+                    />
+                  </button>
+                </a>
+                <span
+                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                >
+                  Web development
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Azunivet -->
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
+          >
+            <div class="lg:w-[40%] text-end">
+              <h2
+                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                Azunivet
+              </h2>
+              <p
+                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                We developed a website for "Azuvinet", a company that develops
+                and exports veterinary products.
+              </p>
+
+              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+                <a
+                  target="_blank"
+                  href="https://www.azunivet.az"
+                  class="flex items-center justify-center"
+                >
+                  <button
+                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                  >
+                    <div
+                      class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                    >
+                      <p class="pr-2">View project</p>
+                      <img
+                        class="lg:w-[40px] md:w-[30px] w-5"
+                        src="/assets/icons/arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <img
+                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      src="/assets/icons/btn-circle.svg"
+                      alt="btn-circle"
+                    />
+                  </button>
+                </a>
+                <span
+                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                >
+                  Web development
+                </span>
+              </div>
+            </div>
+
+            <div class="lg:w-[50%]">
+              <img
+                src="/assets/images/az-univet.png"
+                alt="Azunivet Website"
+                class="object-cover w-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Chevik -->
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
+          >
+            <div class="lg:w-[50%] lg:order-1">
+              <img
+                src="/assets/images/chevik.png"
+                alt="Chevik"
+                class="object-cover w-full rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div class="lg:w-[40%] lg:order-2 text-start">
+              <h2
+                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                Chevik
+              </h2>
+              <p
+                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                A website for "Chevik.az"
+              </p>
+
+              <div class="flex flex-col items-start justify-end gap-4 mt-4">
+                <a
+                  target="_blank"
+                  href="https://chevik.az"
+                  class="flex items-center justify-center"
+                >
+                  <button
+                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                  >
+                    <div
+                      class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                    >
+                      <p class="pr-2">View project</p>
+                      <img
+                        class="lg:w-[40px] md:w-[30px] w-5"
+                        src="/assets/icons/arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <img
+                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      src="/assets/icons/btn-circle.svg"
+                      alt="btn-circle"
+                    />
+                  </button>
+                </a>
+                <span
+                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                >
+                  Web development
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ProNeo -->
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
+          >
+            <div class="lg:w-[40%] text-end">
+              <h2
+                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                ProNeo
+              </h2>
+              <p
+                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                We built a website for the "ProNeo Industrial Engineering"
+                company.
+              </p>
+
+              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+                <a
+                  target="_blank"
+                  href="https://proneo.az"
+                  class="flex items-center justify-center"
+                >
+                  <button
+                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                  >
+                    <div
+                      class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                    >
+                      <p class="pr-2">View project</p>
+                      <img
+                        class="lg:w-[40px] md:w-[30px] w-5"
+                        src="/assets/icons/arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <img
+                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      src="/assets/icons/btn-circle.svg"
+                      alt="btn-circle"
+                    />
+                  </button>
+                </a>
+                <span
+                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                >
+                  Web development
+                </span>
+              </div>
+            </div>
+
+            <div class="lg:w-[50%]">
+              <img
+                src="/assets/images/pro-neo-website.png"
+                alt="ProNeo Website"
+                class="object-cover w-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- veteran.az -->
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
+          >
+            <div class="lg:w-[50%] lg:order-1">
+              <img
+                src="/assets/images/veteran-website.png"
+                alt="Veteran Website"
+                class="object-cover w-full rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div class="lg:w-[40%] lg:order-2 text-start">
+              <h2
+                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                Organization of War, Labor, and Armed Forces Veterans of the
+                Republic of Azerbaijan
+              </h2>
+              <p
+                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                We developed a new website for the Organization of War, Labor,
+                and Armed Forces Veterans of the Republic of Azerbaijan.
+              </p>
+
+              <div class="flex flex-col items-start justify-end gap-4 mt-4">
+                <a
+                  target="_blank"
+                  href="https://veteran.gov.az"
+                  class="flex items-center justify-center"
+                >
+                  <button
+                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                  >
+                    <div
+                      class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                    >
+                      <p class="pr-2">View project</p>
+                      <img
+                        class="lg:w-[40px] md:w-[30px] w-5"
+                        src="/assets/icons/arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <img
+                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      src="/assets/icons/btn-circle.svg"
+                      alt="btn-circle"
+                    />
+                  </button>
+                </a>
+                <span
+                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                >
+                  Web development
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- asapesfm.az -->
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
+          >
+            <div class="lg:w-[40%] text-end">
+              <h2
+                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                Azerbaijan State Academy of Physical Education and Sport
+              </h2>
+              <p
+                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+              >
+                We developed a radio station website for "Azerbaijan State
+                Academy of Physical Education and Sport".
+              </p>
+
+              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+                <a
+                  target="_blank"
+                  href="https://asapesfm.az"
+                  class="flex items-center justify-center"
+                >
+                  <button
+                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                  >
+                    <div
+                      class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                    >
+                      <p class="pr-2">View project</p>
+                      <img
+                        class="lg:w-[40px] md:w-[30px] w-5"
+                        src="/assets/icons/arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <img
+                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      src="/assets/icons/btn-circle.svg"
+                      alt="btn-circle"
+                    />
+                  </button>
+                </a>
+                <span
+                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                >
+                  Web development
+                </span>
+              </div>
+            </div>
+
+            <div class="lg:w-[50%]">
+              <img
+                src="/assets/images/asapes-website.png"
+                alt="ProNeo Website"
+                class="object-cover w-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div
+        class="h-[26vh] dark:bg-black bg-transparent rounded-bl-[20%] rounded-br-[20%] w-full"
+      ></div>
+      <footer
+        class="relative grid grid-cols-4 gap-8 px-10 pt-32 pb-10 bg-white"
+      >
+        <div>
+          <a href="#">
+            <img
+              src="/assets/icons/javachip-logo.svg"
+              alt="Javachip"
+              class="w-40"
+            />
+          </a>
+          <p class="mt-4 text-[#159939] font-bold text-xl">
+            Your Digital Partner
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-2xl text-[#159939] font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li class="mt-5">
+              <a
+                href="/src/pages/services/index.html"
+                class="hover:text-[#159939] text-black font-bold text-base"
+                >Our Services</a
+              >
+            </li>
+            <li class="mt-5">
+              <a
+                href="/src/pages/portfolio/index.html"
+                class="hover:text-[#159939] text-black font-bold text-base"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mt-5">
+              <a
+                href="/src/pages/about/index.html"
+                class="hover:text-[#159939] text-black font-bold text-base"
+                >About Us</a
+              >
+            </li>
+            <li class="mt-5">
+              <a
+                href="/src/pages/contact/index.html"
+                class="hover:text-[#159939] text-black font-bold text-base"
+                >Contact Us</a
+              >
+            </li>
+            <li class="mt-5">
+              <a
+                href="/src/pages/privacy/index.html"
+                class="hover:text-[#159939] text-black font-bold text-base"
+                >Privacy Policy</a
+              >
+            </li>
+            <li class="mt-5">
+              <a
+                href="/src/pages/faq/index.html"
+                class="hover:text-[#159939] text-black font-bold text-base"
+                >FAQs</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-2xl text-[#159939] font-bold mb-4">Contact Us</h3>
+          <div class="flex flex-col space-y-3">
+            <div class="flex items-center gap-3">
+              <img src="/assets/icons/phone.png" width="18px" alt="Phone" />
+              <a href="tel:+994998822500" class="font-medium text-gray-700">
+                +994 99 882 25 00
+              </a>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/assets/icons/mail.png" width="18px" alt="Mail" />
+              <a
+                href="mailto:office@thejavachip.com"
+                class="font-medium text-gray-700"
+              >
+                office@thejavachip.com
+              </a>
+            </div>
+            <div class="flex items-center gap-3">
+              <img
+                src="/assets/icons/location.png"
+                width="20px"
+                alt="Location"
+              />
+              <a
+                href="https://www.google.com/maps/place/The+Javachip+LLC/@40.3655367,49.8309266,17z/data=!3m1!4b1!4m5!3m4!1s0x40307de589f96f27:0x30fb1daa2ffcbc45!8m2!3d40.3655326!4d49.8331153"
+                class="font-medium text-gray-700"
+              >
+                İçərişəhər 18, İlyas Əfəndiyev küç
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl text-[#159939] font-bold mb-4">Follow us</h3>
+          <div class="flex gap-3">
+            <a
+              href="https://www.facebook.com/thejavachipcompany"
+              class="p-2 border rounded-full hover:bg-gray-200"
+              ><svg width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="#101010"
+                  d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"
+                ></path></svg
+            ></a>
+            <a
+              href="https://x.com/Javachip_Global"
+              class="p-2 border rounded-full hover:bg-gray-200"
+              ><svg width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="#101010"
+                  d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.62-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101a4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732a11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9c0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
+                ></path></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/the.javachip.global/"
+              class="p-2 border rounded-full hover:bg-gray-200"
+              ><svg width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="#101010"
+                  d="M12 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0a1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058c-.784.037-1.31.142-1.798.332a2.886 2.886 0 0 0-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029c.037.783.142 1.31.331 1.797c.17.435.37.748.702 1.08c.337.336.65.537 1.08.703c.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058c.782-.037 1.309-.142 1.797-.331a2.92 2.92 0 0 0 1.08-.702c.337-.337.538-.65.704-1.08c.19-.493.296-1.02.332-1.8c.052-1.104.058-1.49.058-4.029c0-2.474-.007-2.878-.058-4.029c-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08a2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06c1.065.05 1.79.217 2.428.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465c-1.066.047-1.405.06-4.122.06c-2.717 0-3.056-.01-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153a4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"
+                ></path></svg
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCzIPQ3A6jWxs_SUPD_Jr2KQ"
+              class="p-2 border rounded-full hover:bg-gray-200"
+              ><svg width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="#101010"
+                  d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5l-6-3.5v7z"
+                ></path></svg
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/the-javachip/"
+              class="p-2 border rounded-full hover:bg-gray-200"
+              ><svg width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="#101010"
+                  d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
+                ></path></svg
+            ></a>
+          </div>
+        </div>
+      </footer>
+
+      <div class="py-4 text-center text-gray-600 bg-gray-100">
+        © JAVACHIP 2025
+      </div>
+    </div>
   </body>
 </html>
