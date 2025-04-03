@@ -5,6 +5,79 @@
     "about": "Haqqında",
     "services": "Xidmətlər",
     "privacy": "Məxfilik Siyasəti",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "selectlang": "Azərbaycanca"
+  },
+  "common": {
+    "services": "Xidmətlərimiz",
+    "digital": "Rəqəmsal Marketinq",
+    "web": "Vebsaytların hazırlanması",
+    "mobile": "Mobil tətbiqlərin hazırlanması",
+    "cyber": "Kibertəhlükəsizlik",
+    "ai": "Süni İntellekt"
+  },
+  "footer": {
+    "logo": {
+      "head": "Rəqəmsal Partnyorunuz"
+    },
+    "titles": {
+      "quickLinks": "Keçidlər",
+      "social": "Bizi izləyin"
+    },
+    "links": {
+      "work": "Portfolio"
+    }
+  },
+  "pages": {
+    "home": {
+      "titles": {
+        "techs": "İstifadə etdiyimiz texnologiya"
+      },
+      "contact": "Bizimlə əlaqə",
+      "learnmore": "Ətraflı",
+      "introduction": {
+        "head": {
+          "startcode": "İnnovasiya Kodla Başlar",
+          "together": "Gəlin Birlikdə Yaradaq."
+        },
+        "subhead": {
+          "empowering": "Brendinizi birləşdirən, ilhamlandıran və böyüdən cəlbedici rəqəmsal təcrübələr yaratmaq üçün sizə güc veririk."
+        }
+      },
+      "services": {
+        "heads": {
+          "web": "Biznesinizi Rəqəmsal Dünyada Tanıdın",
+          "mobile": "Müştərilərlə Hər Zaman Əlaqədə Qalın",
+          "ai": "Şirkətinizi Gələcəyə Hazırlayın, Rəqabətdə Öndə Olun",
+          "cyber": "Sistemlərinizi və Məlumatlarınızı Qoruyun"
+        },
+        "texts": {
+          "web": "Rəqəmsal əsrdə milyonlarla insan bir məhsul və ya xidmət haqqında məlumat almaq üçün internetə üz tutur. Bu günlərdə yaxşı dizayn edilmiş və istifadəçi dostu veb saytla məhsul və xidmətlərinizi ən yaxşı şəkildə nümayiş etdirə bilərsiniz. İndi təsəvvür edin ki, yeni bir veb saytınız var. Minlərlə istifadəçi hər gün saytınızı ziyarət edir və dizayn, sürətli yükləmə müddəti və saytdan asan istifadə ilə heyran qalır. Sizin üçün hazırlayacağımız veb sayt məhz belə olacaqdır.",
+          "mobile": "Dünyada hər gün smartfon istifadəçilərinin sayı artır və buna görə də, biznes sahibi olaraq hər zaman müştərilərinizin olduğu yerdə olmalısınız. Rəqabətin getdikcə artması ilə təkcə vebsaytınızın olması kifayət deyil. Şirkətinizi dəqiq şəkildə əks etdirən və biznes proseslərinizlə tamamilə əlaqəli olan mobil tətbiqə ehtiyacınız ola bilər. Mobil tətbiqlə istifadəçilər alış-veriş etmək, görüş təyin etmək və ya sadəcə xidmət və məhsullar barədə məlumat ala bilərlər. Şirkətinizin mobil tətbiq xidmətlərindən istifadə edərək tətbiq istifadəçiləri daimi müştərilərinizə çevrilə bilər.",
+          "ai": "Gəlin bunu təsəvvür edək: Süni intellektlə yorucu tapşırıqların öhdəsindən gələn və böyüməyə və innovasiyaya fokuslanmağınız üçün vaxt qazandıran bir iş. Faydalı fikirlərə çıxışı olan və müvəffəqiyyəti təmin edən, əsaslandırılmış qərarlar qəbul edə bilən bir biznes. Süni intellekt artıq gələcəyə aid deyil - o, buradadır və biznesə baxış tərzimizi dəyişir. Süni intellekt həllərimiz proseslərinizi sadələşdirməyə, müştəri təcrübənizi təkmilləşdirməyə və biznesiniz haqqında dəyərli fikirlər əldə etməyə kömək edəcək.",
+          "cyber": "Şirkətinizi qurmaq üçün çox çalışmısınız. Sahibkar kimi biznesinizi kibertəhlükələrdən qorumağın vacibliyini bilirsiniz. Buna görə də, bir kiberhücumun sistemlərinizi və şirkətinizin məxfi məlumatlarını ələ keçirməsinə icazə verməməlisiniz. İndi kiberhücumların artması ilə ciddi təhlükəsizlik tədbirlərinə sahib olmaq həmişəkindən daha vacibdir. Ən yüksək səviyyəli kibertəhlükəsizlik xidmətlərinə diqqət yetirməklə müştərilərinizə onların məxfiliyinə və təhlükəsizliyinə dəyər verdiyinizi göstərin."
+        }
+      },
+      "digital": {
+        "smm": {
+          "head": "Potensial müştərilərini müəyyən edərək satışları artır",
+          "subhead": "Sosial media platformaları potensial müştərilərlə əlaqə saxlamağın və brendinizi tanıtmanın ən asan yoludur.."
+        },
+        "seo": {
+          "head": "Vebsaytın optimizasiyası nəticəsində üzvi trafik qazan",
+          "subhead": "Uzunmüddətli marka dəyəri yaratmaq, hədəf auditoriyanızı genişlətmək istəyirsinizsə, vebsaytınızın optimizasiyası çox vacibdir..  "
+        },
+        "sem": {
+          "head": "SEM ilə brend şüurunu artır",
+          "subhead": "SEM, axtarış sistemi səhifələrində vebsaytınızın önə çıxarılması üçün istifadə edilən onlayn reklamdır.."
+        }
+      },
+      "techs": "İnnovativ rəqəmsal məhsul və xidmətləri müştərilərə təhvil verən komandamız hər zaman ən müasir trend və texnologiyaların axtarışındadır. ",
+      "end": {
+        "head": "Rəqəmsal mövcudluğunu təkmilləşdir, Daha çox potensial müştəri qazan və Satışlarını artır.",
+        "text1": "Vaxt itirmə",
+        "text2": "Elə indi saatı kliklə və qiymət təklifi istə"
+      }
+    }
   }
 }

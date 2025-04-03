@@ -26,7 +26,7 @@
     <script defer type="module" src="../../components/nav.js"></script>
     <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
-    <script type="module" src="../../components/i18.js"></script>
+    <script defer type="module" src="../../components/i18.js"></script>
   </head>
   <body
     class="text-black transition-colors duration-300 bg-gray-50 dark:bg-black dark:text-white font-manrope"
@@ -48,19 +48,23 @@
           class="flex items-center space-x-2 md:order-2 md:space-x-4 rtl:space-x-reverse"
         >
           <div id="toggle" class="mr-2 toggle"></div>
+
+          <!-- Dropdown language -->
           <div class="relative">
             <button
-              type="button"
               id="language-dropdown-btn"
               class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-900 rounded-lg cursor-pointer dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               <img
-                class="w-5 h-5 rounded-full me-3"
+                id="current-flag"
+                class="w-5 h-5 rounded-full me-2"
                 src="/assets/images/en-flag.png"
                 alt="en"
               />
-              English
+              <span id="current-language" data-i18n="navbar.selectlang"></span>
             </button>
+
+            <!-- Dropdown Menu -->
             <div
               id="language-dropdown-menu"
               class="absolute right-0 z-50 hidden w-40 mt-2 bg-white rounded-lg shadow-lg dark:bg-gray-800"
@@ -73,7 +77,7 @@
                     data-lang="en"
                   >
                     <img
-                      class="w-5 h-5 rounded-full me-3"
+                      class="w-5 h-5 rounded-full me-2"
                       src="/assets/images/en-flag.png"
                       alt="en"
                     />
@@ -84,12 +88,12 @@
                   <a
                     href="#"
                     class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    data-lang="az"
                   >
                     <img
-                      class="w-5 h-5 rounded-full me-3"
+                      class="w-5 h-5 rounded-full me-2"
                       src="/assets/images/az-flag.png"
-                      alt="en"
-                      data-lang="az"
+                      alt="az"
                     />
                     Azerbaijani
                   </a>
@@ -101,9 +105,9 @@
                     data-lang="ru"
                   >
                     <img
-                      class="w-5 h-5 rounded-full me-3"
+                      class="w-5 h-5 rounded-full me-2"
                       src="/assets/images/ru-flag.png"
-                      alt="en"
+                      alt="ru"
                     />
                     Russian
                   </a>
@@ -114,12 +118,13 @@
 
           <button
             id="menu-btn"
-            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-white dark:focus:ring-gray-600"
           >
             <img
               id="burger-icon"
               src="/assets/icons/burger-black.svg"
               alt="burger"
+              class="text-white"
             />
           </button>
         </div>
@@ -131,6 +136,7 @@
           <ul class="flex flex-col p-4 space-y-2">
             <li>
               <a
+                data-i18n="navbar.home"
                 href="/src/pages/main/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -139,6 +145,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.portfolio"
                 href="/src/pages/portfolio/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -147,6 +154,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.about"
                 href="/src/pages/about/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -155,10 +163,29 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.services"
                 href="/src/pages/services/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 Services
+              </a>
+            </li>
+            <li>
+              <a
+                data-i18n="navbar.privacy"
+                href="/src/pages/services/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                data-i18n="navbar.faq"
+                href="/src/pages/services/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                FAQs
               </a>
             </li>
           </ul>
@@ -175,6 +202,7 @@
           >
             <li>
               <a
+                data-i18n="navbar.home"
                 href="/src/pages/main/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -183,6 +211,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.portfolio"
                 href="/src/pages/portfolio/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -191,6 +220,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.about"
                 href="/src/pages/about/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -199,6 +229,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.services"
                 href="/src/pages/services/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -207,6 +238,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.privacy"
                 href="/src/pages/privacy/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -215,6 +247,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.faq"
                 href="/src/pages/faq/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -236,13 +269,21 @@
           <h1
             class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl"
           >
-            <span class="block xl:inline">Innovation Starts with Code</span>
-            <span class="block text-[#159939] dark:text-[#3bbeef] xl:inline">
+            <span
+              class="block xl:inline"
+              data-i18n="pages.home.introduction.head.startcode"
+              >Innovation Starts with Code</span
+            >
+            <span
+              class="block text-[#159939] dark:text-[#3bbeef] xl:inline"
+              data-i18n="pages.home.introduction.head.together"
+            >
               Let’s Build Together.
             </span>
           </h1>
           <p
             class="mt-6 text-base text-gray-500 dark:text-gray-300 sm:max-w-md lg:text-xl md:max-w-3xl"
+            data-i18n="pages.home.introduction.subhead.empowering"
           >
             Empowering you to create engaging digital experiences that connect,
             inspire, and grow your brand.
@@ -251,6 +292,7 @@
             <a href="/src/pages/contact/index.html">
               <button
                 class="px-6 py-3 text-2xl font-bold text-white bg-[#159939] rounded-lg hover:bg-[#34a3cc] focus:outline-none dark:bg-[#3bbeef] dark:hover:bg-[#159939]"
+                data-i18n="pages.home.contact"
               >
                 Contact Us
               </button>
@@ -276,6 +318,7 @@
     >
       <h1
         class="md:pt-16 pt-8 text-4xl font-bold text-center lg:text-8xl md:text-6xl dark:text-[#3bbeef] text-[#159939]"
+        data-i18n="common.services"
       >
         Our Services
       </h1>
@@ -297,15 +340,20 @@
         >
           <h3
             class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl font-bold"
+            data-i18n="common.web"
           >
             Web Development
           </h3>
           <p
             class="text-2xl md:text-4xl font-bold mt-1.5 dark:text-white text-black"
+            data-i18n="pages.home.services.heads.web"
           >
             Step into the Future with a Website That Wows
           </p>
-          <p class="text-lg font-light text-black dark:text-white mt-1.5">
+          <p
+            class="text-lg font-light text-black dark:text-white mt-1.5"
+            data-i18n="pages.home.services.texts.web"
+          >
             Say goodbye to the yellow pages because, in the digital age, people
             don't reach for the phonebook when they need to find a business.
             They reach for their smartphones. With a well-designed and
@@ -326,7 +374,7 @@
               <div
                 class="flex items-center transition-all duration-300 hover:animate-slideRight"
               >
-                <p class="pr-2">Learn More</p>
+                <p class="pr-2" data-i18n="pages.home.learnmore">Learn More</p>
                 <img
                   class="lg:w-[60px] md:w-[50px] w-10"
                   src="/assets/icons/arrow.svg"
@@ -353,15 +401,20 @@
           >
             <h3
               class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl font-bold"
+              data-i18n="common.mobile"
             >
               Mobile App Development
             </h3>
             <p
               class="text-2xl md:text-4xl font-bold mt-1.5 dark:text-white text-black"
+              data-i18n="pages.home.services.heads.mobile"
             >
               Put Your Business in the Palm of Their Hand
             </p>
-            <p class="text-xl font-light text-black dark:text-white mt-1.5">
+            <p
+              class="text-xl font-light text-black dark:text-white mt-1.5"
+              data-i18n="pages.home.services.texts.mobile"
+            >
               The world is becoming increasingly mobile, and as a business
               owner, you need to be where your customers are. With more and more
               people using their smartphones for everything, a mobile app can be
@@ -383,7 +436,7 @@
               <div
                 class="flex items-center transition-all duration-300 hover:animate-slideRight"
               >
-                <p class="pr-2">Learn More</p>
+                <p class="pr-2" data-i18n="pages.home.learnmore">Learn More</p>
                 <img
                   class="lg:w-[60px] md:w-[50px] w-10"
                   src="/assets/icons/arrow.svg"
@@ -421,15 +474,20 @@
         >
           <h3
             class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl font-bold"
+            data-i18n="common.ai"
           >
             Artificial Intelligence
           </h3>
           <p
             class="text-2xl md:text-4xl font-bold mt-1.5 dark:text-white text-black"
+            data-i18n="pages.home.services.heads.ai"
           >
             Future-Proof Your Business and Stay Ahead of the Competition
           </p>
-          <p class="text-lg font-light text-black dark:text-white mt-1.5">
+          <p
+            class="text-lg font-light text-black dark:text-white mt-1.5"
+            data-i18n="pages.home.services.texts.ai"
+          >
             Imagine this: A business that runs like a well-oiled machine, with
             AI taking care of the tedious tasks and freeing up time for you to
             focus on growth and innovation. A business that has access to
@@ -450,7 +508,7 @@
               <div
                 class="flex items-center transition-all duration-300 hover:animate-slideRight"
               >
-                <p class="pr-2">Learn More</p>
+                <p class="pr-2" data-i18n="pages.home.learnmore">Learn More</p>
                 <img
                   class="lg:w-[60px] md:w-[50px] w-10"
                   src="/assets/icons/arrow.svg"
@@ -477,15 +535,20 @@
           >
             <h3
               class="dark:text-[#3bbeef] text-[#159939] text-4xl md:text-6xl font-bold"
+              data-i18n="common.cyber"
             >
               Cyber Security
             </h3>
             <p
               class="text-2xl md:text-4xl font-bold mt-1.5 dark:text-white text-black"
+              data-i18n="pages.home.services.heads.cyber"
             >
               Sleep Soundly at Night with Cyber Security That's Got Your Back
             </p>
-            <p class="text-xl font-light text-black dark:text-white mt-1.5">
+            <p
+              class="text-xl font-light text-black dark:text-white mt-1.5"
+              data-i18n="pages.home.services.texts.cyber"
+            >
               You've worked hard to build your business. As a business owner,
               you know the importance of protecting your business from cyber
               threats. Don't let a security breach bring everything crashing
@@ -504,7 +567,7 @@
               <div
                 class="flex items-center transition-all duration-300 hover:animate-slideRight"
               >
-                <p class="pr-2">Learn More</p>
+                <p class="pr-2" data-i18n="pages.home.learnmore">Learn More</p>
                 <img
                   class="lg:w-[60px] md:w-[50px] w-10"
                   src="/assets/icons/arrow.svg"
@@ -532,6 +595,7 @@
     <section class="pt-16 text-black bg-gray-50 dark:bg-black dark:text-white">
       <h1
         class="text-4xl font-bold text-center lg:text-8xl md:text-6xl dark:text-[#3bbeef] text-[#159939]"
+        data-i18n="common.digital"
       >
         Digital Marketing
       </h1>
@@ -555,11 +619,17 @@
                     alt="bracket"
                   />
                   <div class="max-w-full md:max-w-60">
-                    <h2 class="font-bold md:text-2xl dark:text-black">
+                    <h2
+                      class="font-bold md:text-2xl dark:text-black"
+                      data-i18n="pages.home.digital.smm.head"
+                    >
                       Reach out to your potential customers and increase your
                       sales
                     </h2>
-                    <p class="dark:text-black">
+                    <p
+                      class="dark:text-black"
+                      data-i18n="pages.home.digital.smm.subhead"
+                    >
                       Social media platforms are the easiest way to reach out to
                       potential customers and spread awareness about your
                       company.
@@ -585,10 +655,16 @@
                     alt="bracket"
                   />
                   <div class="max-w-full md:max-w-60">
-                    <h2 class="font-bold md:text-2xl dark:text-black">
+                    <h2
+                      class="font-bold md:text-2xl dark:text-black"
+                      data-i18n="pages.home.digital.seo.head"
+                    >
                       Optimize your website and generate organic traffic
                     </h2>
-                    <p class="dark:text-black">
+                    <p
+                      class="dark:text-black"
+                      data-i18n="pages.home.digital.seo.subhead"
+                    >
                       Search engine optimization is a process of optimizing your
                       website to rank higher in search engine results pages.
                     </p>
@@ -613,10 +689,16 @@
                     alt="bracket"
                   />
                   <div class="max-w-full md:max-w-60">
-                    <h2 class="font-bold md:text-2xl dark:text-black">
+                    <h2
+                      class="font-bold md:text-2xl dark:text-black"
+                      data-i18n="pages.home.digital.sem.head"
+                    >
                       Increase your Brand Awareness
                     </h2>
-                    <p class="dark:text-black">
+                    <p
+                      class="dark:text-black"
+                      data-i18n="pages.home.digital.sem.subhead"
+                    >
                       SEM is the online advertising that is used to increase the
                       visibility of a website on search engine result pages.
                     </p>
@@ -638,10 +720,14 @@
     >
       <h1
         class="text-[#989b09] text-5xl md:text-7xl pt-8 text-center tracking-tight font-bold"
+        data-i18n="pages.home.titles.techs"
       >
         Technologies we use
       </h1>
-      <p class="max-w-4xl p-12 text-lg md:text-2xl">
+      <p
+        class="max-w-4xl p-12 text-lg md:text-2xl"
+        data-i18n="pages.home.techs"
+      >
         We're always on the hunt for new technologies that can help us work
         smarter, faster, better and we're always pushing the boundaries of
         what's possible.
@@ -882,11 +968,13 @@
       <div class="flex flex-col items-center justify-center text-center">
         <h1
           class="text-[#159939] text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-[1100px] font-manrope font-medium p-2 sm:p-4"
+          data-i18n="pages.home.end.head"
         >
           Improve your digital presence, Get more leads, and Boost your business
         </h1>
         <h3
           class="mt-2 mb-2 text-sm text-black sm:mt-4 sm:mb-4 sm:text-base md:text-lg lg:text-2xl font-manrope dark:text-white"
+          data-i18n="pages.home.end.text1"
         >
           Do not waste your time
         </h3>
@@ -905,6 +993,7 @@
 
         <h3
           class="mt-4 mb-4 text-xl font-bold text-black dark:text-white sm:mt-6 sm:mb-6 sm:text-2xl lg:text-3xl"
+          data-i18n="pages.home.end.text2"
         >
           Click o’clock and send us your wish list
         </h3>
@@ -926,18 +1015,27 @@
               class="w-40"
             />
           </a>
-          <p class="mt-4 text-[#159939] font-bold text-xl">
+          <p
+            class="mt-4 text-[#159939] font-bold text-xl"
+            data-i18n="footer.logo.head"
+          >
             Your Digital Partner
           </p>
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Quick Links</h3>
+          <h3
+            class="text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.quickLinks"
+          >
+            Quick Links
+          </h3>
           <ul class="space-y-2">
             <li class="mt-5">
               <a
                 href="/src/pages/services/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="common.services"
                 >Our Services</a
               >
             </li>
@@ -945,6 +1043,7 @@
               <a
                 href="/src/pages/portfolio/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="navbar.portfolio"
                 >Portfolio</a
               >
             </li>
@@ -952,6 +1051,7 @@
               <a
                 href="/src/pages/about/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="navbar.about"
                 >About Us</a
               >
             </li>
@@ -959,6 +1059,7 @@
               <a
                 href="/src/pages/contact/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="pages.home.contact"
                 >Contact Us</a
               >
             </li>
@@ -966,6 +1067,7 @@
               <a
                 href="/src/pages/privacy/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="navbar.privacy"
                 >Privacy Policy</a
               >
             </li>
@@ -973,6 +1075,7 @@
               <a
                 href="/src/pages/faq/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="navbar.faq"
                 >FAQs</a
               >
             </li>
@@ -980,7 +1083,12 @@
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Contact Us</h3>
+          <h3
+            class="text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="pages.home.contact"
+          >
+            Contact Us
+          </h3>
           <div class="flex flex-col space-y-3">
             <div class="flex items-center gap-3">
               <img src="/assets/icons/phone.png" width="18px" alt="Phone" />
@@ -1014,7 +1122,12 @@
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Follow us</h3>
+          <h3
+            class="text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.social"
+          >
+            Follow us
+          </h3>
           <div class="flex gap-3">
             <a
               href="https://www.facebook.com/thejavachipcompany"

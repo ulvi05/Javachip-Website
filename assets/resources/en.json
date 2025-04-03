@@ -5,6 +5,77 @@
     "about": "About",
     "services": "Services",
     "privacy": "Privacy Policy",
-    "faq": "FAQs"
+    "faq": "FAQs",
+    "selectlang": "English"
+  },
+  "common": {
+    "services": "Our Services",
+    "digital": "Digital Marketing",
+    "web": "Web Development",
+    "mobile": "Mobile App Development",
+    "cyber": "Cybersecurity",
+    "ai": "Artificial Intelligence"
+  },
+  "footer": {
+    "logo": {
+      "head": "Your Digital Partner"
+    },
+    "titles": {
+      "quickLinks": "Quick Links",
+      "social": "Follow us"
+    }
+  },
+  "pages": {
+    "home": {
+      "titles": {
+        "techs": "Technologies we use"
+      },
+      "contact": "Contact Us",
+      "learnmore": "Learn More",
+      "introduction": {
+        "head": {
+          "startcode": "Innovation Starts with Code",
+          "together": "Let’s Build Together."
+        },
+        "subhead": {
+          "empowering": "Empowering you to create engaging digital experiences that connect, inspire, and grow your brand."
+        }
+      },
+      "services": {
+        "heads": {
+          "web": "Step into the Future with a Website That Wows",
+          "mobile": "Put Your Business in the Palm of Their Hand",
+          "ai": "Future-Proof Your Business and Stay Ahead of the Competition",
+          "cyber": "Sleep Soundly at Night with Cyber Security That's Got Your Back"
+        },
+        "texts": {
+          "web": "Say goodbye to the yellow pages because, in the digital age, people don't reach for the phonebook when they need to find a business. They reach for their smartphones. With a well-designed and user-friendly website, you can showcase your products and services in the best possible light. Now picture that you've just launched your brand new website and the traffic is flooding in. Your customers are amazed by the design, lightning-fast load times, and effortless user experience. This is the kind of website we can build for you.",
+          "mobile": "The world is becoming increasingly mobile, and as a business owner, you need to be where your customers are. With more and more people using their smartphones for everything, a mobile app can be a game-changer for your business. With a mobile app, your customers will have easy and convenient access to your business, whether they need to make a purchase, book an appointment, or just get some information. A great mobile app will keep your customers engaged and coming back for more. Who knows, they may even tell their friends and family about your business!",
+          "ai": "Imagine this: A business that runs like a well-oiled machine, with AI taking care of the tedious tasks and freeing up time for you to focus on growth and innovation. A business that has access to valuable insights and can make informed decisions that drive success. Artificial Intelligence is no longer a thing of the future - it's here, and it's changing the way we do business. Our AI solutions will help you streamline your processes, enhance your customer experience, and gain valuable insights into your business. Let's harness the power of AI today!",
+          "cyber": "You've worked hard to build your business. As a business owner, you know the importance of protecting your business from cyber threats. Don't let a security breach bring everything crashing down. With the rise of cyber attacks, it's more critical than ever to have robust security measures in place. Invest in your peace of mind and protect your business with our Cyber Security services."
+        }
+      },
+      "digital": {
+        "seo": {
+          "head": "Optimize your website and generate organic traffic",
+          "subhead": "Search engine optimization is a process of optimizing your website to rank higher in search engine results pages..",
+          "button": "Get your FREE website audit now"
+        },
+        "smm": {
+          "head": "Reach out your potential customers and increase your sales",
+          "subhead": "Social media platforms are the easiest way to reach out to potential customers and spread awareness about your company.. "
+        },
+        "sem": {
+          "head": "Increase your Brand Awareness",
+          "subhead": "SEM is the online advertising that is used to increase the visibility of a website on search engine result pages.."
+        }
+      },
+      "techs": "We'rе always on the hunt for new teсhnologies that can help us work smarter, faster, and better, and we'rе always pushing thе boundaries of what's possiblе.",
+      "end": {
+        "head": "Improve your digital presence, Get more leads, and Boost your business",
+        "text1": "Do not waste your time",
+        "text2": "Click o’clock and send us your wish list"
+      }
+    }
   }
 }

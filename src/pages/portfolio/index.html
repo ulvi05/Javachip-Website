@@ -17,6 +17,9 @@
     ></script>
     <script defer type="module" src="./index.js"></script>
     <script defer type="module" src="../../components/nav.js"></script>
+    <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script defer type="module" src="../../components/i18.js"></script>
   </head>
   <body
     class="text-black transition-colors duration-300 bg-gray-50 !dark:bg-black dark:text-white font-manrope"
@@ -38,19 +41,23 @@
           class="flex items-center space-x-2 md:order-2 md:space-x-4 rtl:space-x-reverse"
         >
           <div id="toggle" class="mr-2 toggle"></div>
+
+          <!-- Dropdown language -->
           <div class="relative">
             <button
-              type="button"
               id="language-dropdown-btn"
               class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-900 rounded-lg cursor-pointer dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               <img
-                class="w-5 h-5 rounded-full me-3"
+                id="current-flag"
+                class="w-5 h-5 rounded-full me-2"
                 src="/assets/images/en-flag.png"
                 alt="en"
               />
-              English
+              <span id="current-language" data-i18n="navbar.selectlang"></span>
             </button>
+
+            <!-- Dropdown Menu -->
             <div
               id="language-dropdown-menu"
               class="absolute right-0 z-50 hidden w-40 mt-2 bg-white rounded-lg shadow-lg dark:bg-gray-800"
@@ -60,9 +67,10 @@
                   <a
                     href="#"
                     class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    data-lang="en"
                   >
                     <img
-                      class="w-5 h-5 rounded-full me-3"
+                      class="w-5 h-5 rounded-full me-2"
                       src="/assets/images/en-flag.png"
                       alt="en"
                     />
@@ -73,11 +81,12 @@
                   <a
                     href="#"
                     class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    data-lang="az"
                   >
                     <img
-                      class="w-5 h-5 rounded-full me-3"
+                      class="w-5 h-5 rounded-full me-2"
                       src="/assets/images/az-flag.png"
-                      alt="en"
+                      alt="az"
                     />
                     Azerbaijani
                   </a>
@@ -86,11 +95,12 @@
                   <a
                     href="#"
                     class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    data-lang="ru"
                   >
                     <img
-                      class="w-5 h-5 rounded-full me-3"
+                      class="w-5 h-5 rounded-full me-2"
                       src="/assets/images/ru-flag.png"
-                      alt="en"
+                      alt="ru"
                     />
                     Russian
                   </a>
@@ -101,12 +111,13 @@
 
           <button
             id="menu-btn"
-            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-white dark:focus:ring-gray-600"
           >
             <img
               id="burger-icon"
               src="/assets/icons/burger-black.svg"
               alt="burger"
+              class="text-white"
             />
           </button>
         </div>
@@ -118,6 +129,7 @@
           <ul class="flex flex-col p-4 space-y-2">
             <li>
               <a
+                data-i18n="navbar.home"
                 href="/src/pages/main/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -126,6 +138,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.portfolio"
                 href="/src/pages/portfolio/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -134,6 +147,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.about"
                 href="/src/pages/about/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -142,10 +156,29 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.services"
                 href="/src/pages/services/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 Services
+              </a>
+            </li>
+            <li>
+              <a
+                data-i18n="navbar.privacy"
+                href="/src/pages/services/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                data-i18n="navbar.faq"
+                href="/src/pages/services/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                FAQs
               </a>
             </li>
           </ul>
@@ -162,6 +195,7 @@
           >
             <li>
               <a
+                data-i18n="navbar.home"
                 href="/src/pages/main/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -170,6 +204,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.portfolio"
                 href="/src/pages/portfolio/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -178,6 +213,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.about"
                 href="/src/pages/about/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -186,6 +222,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.services"
                 href="/src/pages/services/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -194,6 +231,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.privacy"
                 href="/src/pages/privacy/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -202,6 +240,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.faq"
                 href="/src/pages/faq/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -799,18 +838,27 @@
               class="w-40"
             />
           </a>
-          <p class="mt-4 text-[#159939] font-bold text-xl">
+          <p
+            class="mt-4 text-[#159939] font-bold text-xl"
+            data-i18n="footer.logo.head"
+          >
             Your Digital Partner
           </p>
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Quick Links</h3>
+          <h3
+            class="text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.quickLinks"
+          >
+            Quick Links
+          </h3>
           <ul class="space-y-2">
             <li class="mt-5">
               <a
                 href="/src/pages/services/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="common.services"
                 >Our Services</a
               >
             </li>
@@ -818,6 +866,7 @@
               <a
                 href="/src/pages/portfolio/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="navbar.portfolio"
                 >Portfolio</a
               >
             </li>
@@ -825,6 +874,7 @@
               <a
                 href="/src/pages/about/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="navbar.about"
                 >About Us</a
               >
             </li>
@@ -832,6 +882,7 @@
               <a
                 href="/src/pages/contact/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="pages.home.contact"
                 >Contact Us</a
               >
             </li>
@@ -839,6 +890,7 @@
               <a
                 href="/src/pages/privacy/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="navbar.privacy"
                 >Privacy Policy</a
               >
             </li>
@@ -846,6 +898,7 @@
               <a
                 href="/src/pages/faq/index.html"
                 class="hover:text-[#159939] text-black font-bold text-base"
+                data-i18n="navbar.faq"
                 >FAQs</a
               >
             </li>
@@ -853,7 +906,12 @@
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Contact Us</h3>
+          <h3
+            class="text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="pages.home.contact"
+          >
+            Contact Us
+          </h3>
           <div class="flex flex-col space-y-3">
             <div class="flex items-center gap-3">
               <img src="/assets/icons/phone.png" width="18px" alt="Phone" />
@@ -887,7 +945,12 @@
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Follow us</h3>
+          <h3
+            class="text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.social"
+          >
+            Follow us
+          </h3>
           <div class="flex gap-3">
             <a
               href="https://www.facebook.com/thejavachipcompany"
