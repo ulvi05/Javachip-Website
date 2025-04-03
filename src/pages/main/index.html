@@ -24,6 +24,9 @@
     <script type="module" src="../../components/iconSwiper.js" defer></script>
     <script type="module" src="../../components/liveClock.js" defer></script>
     <script defer type="module" src="../../components/nav.js"></script>
+    <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script type="module" src="../../components/i18.js"></script>
   </head>
   <body
     class="text-black transition-colors duration-300 bg-gray-50 dark:bg-black dark:text-white font-manrope"
@@ -67,6 +70,7 @@
                   <a
                     href="#"
                     class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    data-lang="en"
                   >
                     <img
                       class="w-5 h-5 rounded-full me-3"
@@ -85,6 +89,7 @@
                       class="w-5 h-5 rounded-full me-3"
                       src="/assets/images/az-flag.png"
                       alt="en"
+                      data-lang="az"
                     />
                     Azerbaijani
                   </a>
@@ -93,6 +98,7 @@
                   <a
                     href="#"
                     class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    data-lang="ru"
                   >
                     <img
                       class="w-5 h-5 rounded-full me-3"
