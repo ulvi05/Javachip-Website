@@ -111,13 +111,18 @@
 
           <button
             id="menu-btn"
-            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-white dark:focus:ring-gray-600"
+            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden dark:text-gray-400"
           >
             <img
               id="burger-icon"
               src="/assets/icons/burger-black.svg"
               alt="burger"
-              class="text-white"
+              class="block bg-white dark:hidden"
+            />
+            <img
+              src="/assets/icons/burger-white.svg"
+              alt="burger"
+              class="hidden dark:block"
             />
           </button>
         </div>
@@ -258,65 +263,72 @@
       <div>
         <h1
           class="text-2xl font-bold text-center lg:text-8xl md:text-6xl dark:text-[#3bbeef] text-[#159939]"
+          data-i18n="common.services"
         >
           Our Projects
         </h1>
       </div>
 
-      <div class="grid w-full max-w-6xl grid-cols-1 gap-16 mt-12">
+      <div
+        class="grid w-full max-w-6xl grid-cols-1 gap-8 px-4 mt-12 md:gap-12 lg:gap-16 md:px-6"
+      >
         <!-- Horeca -->
         <div class="flex flex-col w-full">
           <div
             class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
           >
-            <div class="lg:w-[40%] text-end">
+            <div class="lg:w-[40%] text-center lg:text-end">
               <h2
-                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+                class="text-2xl font-normal text-gray-600 md:text-3xl dark:text-gray-300 font-manrope"
               >
                 Horeca
               </h2>
               <p
-                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+                class="mt-2 text-lg font-bold text-gray-600 md:mt-4 md:text-xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.texts.text1"
               >
                 We developed a website for "Horeca", one of the leading
                 companies in the cleaning industry.
               </p>
 
-              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+              <div
+                class="flex flex-col items-center justify-end gap-2 mt-3 lg:items-end md:gap-4 md:mt-4"
+              >
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://horeca.com.az"
                   class="flex items-center justify-center"
                 >
                   <button
-                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                    class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
                   >
                     <div
                       class="flex items-center transition-all duration-300 hover:animate-slideRight"
                     >
                       <p class="pr-2">View project</p>
                       <img
-                        class="lg:w-[40px] md:w-[30px] w-5"
+                        class="w-4 md:w-5 lg:w-[40px]"
                         src="/assets/icons/arrow.svg"
                         alt="arrow"
                       />
                     </div>
                     <img
-                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      class="w-4 md:w-5 lg:w-[40px] relative right-4"
                       src="/assets/icons/btn-circle.svg"
                       alt="btn-circle"
                     />
                   </button>
                 </a>
                 <span
-                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                  class="text-base md:text-lg text-gray-800 dark:text-[#ffffff4d] font-manrope"
                 >
                   Web development
                 </span>
               </div>
             </div>
 
-            <div class="lg:w-[50%]">
+            <div class="lg:w-[50%] mt-4 lg:mt-0">
               <img
                 src="/assets/images/horeca.png"
                 alt="Horeca Website"
@@ -331,7 +343,7 @@
           <div
             class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
           >
-            <div class="lg:w-[50%] lg:order-1">
+            <div class="lg:w-[50%] lg:order-1 order-2">
               <img
                 src="/assets/images/wide-travel.png"
                 alt="Wide Travel"
@@ -339,46 +351,52 @@
               />
             </div>
 
-            <div class="lg:w-[40%] lg:order-2 text-start">
+            <div
+              class="lg:w-[40%] lg:order-2 order-1 text-center lg:text-start"
+            >
               <h2
-                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+                class="text-2xl font-normal text-gray-600 md:text-3xl dark:text-gray-300 font-manrope"
               >
                 Wide Travel
               </h2>
               <p
-                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+                class="mt-2 text-lg font-bold text-gray-600 md:mt-4 md:text-xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.texts.text2"
               >
                 We developed a website for the tourism company "Wide Travel".
               </p>
 
-              <div class="flex flex-col items-start justify-end gap-4 mt-4">
+              <div
+                class="flex flex-col items-center justify-end gap-2 mt-3 lg:items-start md:gap-4 md:mt-4"
+              >
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://wide-travel.com"
                   class="flex items-center justify-center"
                 >
                   <button
-                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                    class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
                   >
                     <div
                       class="flex items-center transition-all duration-300 hover:animate-slideRight"
                     >
                       <p class="pr-2">View project</p>
                       <img
-                        class="lg:w-[40px] md:w-[30px] w-5"
+                        class="w-4 md:w-5 lg:w-[40px]"
                         src="/assets/icons/arrow.svg"
                         alt="arrow"
                       />
                     </div>
                     <img
-                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      class="w-4 md:w-5 lg:w-[40px] relative right-4"
                       src="/assets/icons/btn-circle.svg"
                       alt="btn-circle"
                     />
                   </button>
                 </a>
                 <span
-                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                  class="text-base md:text-lg text-gray-800 dark:text-[#ffffff4d] font-manrope"
                 >
                   Web development
                 </span>
@@ -392,54 +410,58 @@
           <div
             class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
           >
-            <div class="lg:w-[40%] text-end">
+            <div class="lg:w-[40%] text-center lg:text-end">
               <h2
-                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+                class="text-2xl font-normal text-gray-600 md:text-3xl dark:text-gray-300 font-manrope"
               >
                 Avtobus
               </h2>
               <p
-                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+                class="mt-2 text-lg font-bold text-gray-600 md:mt-4 md:text-xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.texts.text3"
               >
                 We provided back-end service for "Avtobus", one of the leading
                 companies in the field of passenger transportation.
               </p>
 
-              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+              <div
+                class="flex flex-col items-center justify-end gap-2 mt-3 lg:items-end md:gap-4 md:mt-4"
+              >
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://avtobus.az"
                   class="flex items-center justify-center"
                 >
                   <button
-                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                    class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
                   >
                     <div
                       class="flex items-center transition-all duration-300 hover:animate-slideRight"
                     >
                       <p class="pr-2">View project</p>
                       <img
-                        class="lg:w-[40px] md:w-[30px] w-5"
+                        class="w-4 md:w-5 lg:w-[40px]"
                         src="/assets/icons/arrow.svg"
                         alt="arrow"
                       />
                     </div>
                     <img
-                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      class="w-4 md:w-5 lg:w-[40px] relative right-4"
                       src="/assets/icons/btn-circle.svg"
                       alt="btn-circle"
                     />
                   </button>
                 </a>
                 <span
-                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                  class="text-base md:text-lg text-gray-800 dark:text-[#ffffff4d] font-manrope"
                 >
                   Web development
                 </span>
               </div>
             </div>
 
-            <div class="lg:w-[50%]">
+            <div class="lg:w-[50%] mt-4 lg:mt-0">
               <img
                 src="/assets/images/avtobus-website.png"
                 alt="Avtobus Website"
@@ -454,7 +476,7 @@
           <div
             class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
           >
-            <div class="lg:w-[50%] lg:order-1">
+            <div class="lg:w-[50%] lg:order-1 order-2">
               <img
                 src="/assets/images/az-standart.png"
                 alt="Azstandart Service"
@@ -462,47 +484,53 @@
               />
             </div>
 
-            <div class="lg:w-[40%] lg:order-2 text-start">
+            <div
+              class="lg:w-[40%] lg:order-2 order-1 text-center lg:text-start"
+            >
               <h2
-                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+                class="text-2xl font-normal text-gray-600 md:text-3xl dark:text-gray-300 font-manrope"
               >
                 Azstandart Service
               </h2>
               <p
-                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+                class="mt-2 text-lg font-bold text-gray-600 md:mt-4 md:text-xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.texts.text4"
               >
                 We built a website for standardization and patenting agency,
                 "Azstandart Service".
               </p>
 
-              <div class="flex flex-col items-start justify-end gap-4 mt-4">
+              <div
+                class="flex flex-col items-center justify-end gap-2 mt-3 lg:items-start md:gap-4 md:mt-4"
+              >
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.azstandart.az"
                   class="flex items-center justify-center"
                 >
                   <button
-                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                    class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
                   >
                     <div
                       class="flex items-center transition-all duration-300 hover:animate-slideRight"
                     >
                       <p class="pr-2">View project</p>
                       <img
-                        class="lg:w-[40px] md:w-[30px] w-5"
+                        class="w-4 md:w-5 lg:w-[40px]"
                         src="/assets/icons/arrow.svg"
                         alt="arrow"
                       />
                     </div>
                     <img
-                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      class="w-4 md:w-5 lg:w-[40px] relative right-4"
                       src="/assets/icons/btn-circle.svg"
                       alt="btn-circle"
                     />
                   </button>
                 </a>
                 <span
-                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                  class="text-base md:text-lg text-gray-800 dark:text-[#ffffff4d] font-manrope"
                 >
                   Web development
                 </span>
@@ -516,54 +544,58 @@
           <div
             class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
           >
-            <div class="lg:w-[40%] text-end">
+            <div class="lg:w-[40%] text-center lg:text-end">
               <h2
-                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+                class="text-2xl font-normal text-gray-600 md:text-3xl dark:text-gray-300 font-manrope"
               >
                 Azunivet
               </h2>
               <p
-                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+                class="mt-2 text-lg font-bold text-gray-600 md:mt-4 md:text-xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.texts.text5"
               >
                 We developed a website for "Azuvinet", a company that develops
                 and exports veterinary products.
               </p>
 
-              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+              <div
+                class="flex flex-col items-center justify-end gap-2 mt-3 lg:items-end md:gap-4 md:mt-4"
+              >
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.azunivet.az"
                   class="flex items-center justify-center"
                 >
                   <button
-                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                    class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
                   >
                     <div
                       class="flex items-center transition-all duration-300 hover:animate-slideRight"
                     >
                       <p class="pr-2">View project</p>
                       <img
-                        class="lg:w-[40px] md:w-[30px] w-5"
+                        class="w-4 md:w-5 lg:w-[40px]"
                         src="/assets/icons/arrow.svg"
                         alt="arrow"
                       />
                     </div>
                     <img
-                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      class="w-4 md:w-5 lg:w-[40px] relative right-4"
                       src="/assets/icons/btn-circle.svg"
                       alt="btn-circle"
                     />
                   </button>
                 </a>
                 <span
-                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                  class="text-base md:text-lg text-gray-800 dark:text-[#ffffff4d] font-manrope"
                 >
                   Web development
                 </span>
               </div>
             </div>
 
-            <div class="lg:w-[50%]">
+            <div class="lg:w-[50%] mt-4 lg:mt-0">
               <img
                 src="/assets/images/az-univet.png"
                 alt="Azunivet Website"
@@ -578,7 +610,7 @@
           <div
             class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
           >
-            <div class="lg:w-[50%] lg:order-1">
+            <div class="lg:w-[50%] lg:order-1 order-2">
               <img
                 src="/assets/images/chevik.png"
                 alt="Chevik"
@@ -586,46 +618,52 @@
               />
             </div>
 
-            <div class="lg:w-[40%] lg:order-2 text-start">
+            <div
+              class="lg:w-[40%] lg:order-2 order-1 text-center lg:text-start"
+            >
               <h2
-                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+                class="text-2xl font-normal text-gray-600 md:text-3xl dark:text-gray-300 font-manrope"
               >
                 Chevik
               </h2>
               <p
-                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+                class="mt-2 text-lg font-bold text-gray-600 md:mt-4 md:text-xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.texts.text6"
               >
                 A website for "Chevik.az"
               </p>
 
-              <div class="flex flex-col items-start justify-end gap-4 mt-4">
+              <div
+                class="flex flex-col items-center justify-end gap-2 mt-3 lg:items-start md:gap-4 md:mt-4"
+              >
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://chevik.az"
                   class="flex items-center justify-center"
                 >
                   <button
-                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                    class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
                   >
                     <div
                       class="flex items-center transition-all duration-300 hover:animate-slideRight"
                     >
                       <p class="pr-2">View project</p>
                       <img
-                        class="lg:w-[40px] md:w-[30px] w-5"
+                        class="w-4 md:w-5 lg:w-[40px]"
                         src="/assets/icons/arrow.svg"
                         alt="arrow"
                       />
                     </div>
                     <img
-                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      class="w-4 md:w-5 lg:w-[40px] relative right-4"
                       src="/assets/icons/btn-circle.svg"
                       alt="btn-circle"
                     />
                   </button>
                 </a>
                 <span
-                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                  class="text-base md:text-lg text-gray-800 dark:text-[#ffffff4d] font-manrope"
                 >
                   Web development
                 </span>
@@ -639,54 +677,58 @@
           <div
             class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
           >
-            <div class="lg:w-[40%] text-end">
+            <div class="lg:w-[40%] text-center lg:text-end">
               <h2
-                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+                class="text-2xl font-normal text-gray-600 md:text-3xl dark:text-gray-300 font-manrope"
               >
                 ProNeo
               </h2>
               <p
-                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+                class="mt-2 text-lg font-bold text-gray-600 md:mt-4 md:text-xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.texts.text7"
               >
                 We built a website for the "ProNeo Industrial Engineering"
                 company.
               </p>
 
-              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+              <div
+                class="flex flex-col items-center justify-end gap-2 mt-3 lg:items-end md:gap-4 md:mt-4"
+              >
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://proneo.az"
                   class="flex items-center justify-center"
                 >
                   <button
-                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                    class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
                   >
                     <div
                       class="flex items-center transition-all duration-300 hover:animate-slideRight"
                     >
                       <p class="pr-2">View project</p>
                       <img
-                        class="lg:w-[40px] md:w-[30px] w-5"
+                        class="w-4 md:w-5 lg:w-[40px]"
                         src="/assets/icons/arrow.svg"
                         alt="arrow"
                       />
                     </div>
                     <img
-                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      class="w-4 md:w-5 lg:w-[40px] relative right-4"
                       src="/assets/icons/btn-circle.svg"
                       alt="btn-circle"
                     />
                   </button>
                 </a>
                 <span
-                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                  class="text-base md:text-lg text-gray-800 dark:text-[#ffffff4d] font-manrope"
                 >
                   Web development
                 </span>
               </div>
             </div>
 
-            <div class="lg:w-[50%]">
+            <div class="lg:w-[50%] mt-4 lg:mt-0">
               <img
                 src="/assets/images/pro-neo-website.png"
                 alt="ProNeo Website"
@@ -701,7 +743,7 @@
           <div
             class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
           >
-            <div class="lg:w-[50%] lg:order-1">
+            <div class="lg:w-[50%] lg:order-1 order-2">
               <img
                 src="/assets/images/veteran-website.png"
                 alt="Veteran Website"
@@ -709,48 +751,55 @@
               />
             </div>
 
-            <div class="lg:w-[40%] lg:order-2 text-start">
+            <div
+              class="lg:w-[40%] lg:order-2 order-1 text-center lg:text-start"
+            >
               <h2
-                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+                class="text-2xl font-normal text-gray-600 md:text-3xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.head1"
               >
                 Organization of War, Labor, and Armed Forces Veterans of the
                 Republic of Azerbaijan
               </h2>
               <p
-                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+                class="mt-2 text-lg font-bold text-gray-600 md:mt-4 md:text-xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.texts.text8"
               >
                 We developed a new website for the Organization of War, Labor,
                 and Armed Forces Veterans of the Republic of Azerbaijan.
               </p>
 
-              <div class="flex flex-col items-start justify-end gap-4 mt-4">
+              <div
+                class="flex flex-col items-center justify-end gap-2 mt-3 lg:items-start md:gap-4 md:mt-4"
+              >
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://veteran.gov.az"
                   class="flex items-center justify-center"
                 >
                   <button
-                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                    class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
                   >
                     <div
                       class="flex items-center transition-all duration-300 hover:animate-slideRight"
                     >
                       <p class="pr-2">View project</p>
                       <img
-                        class="lg:w-[40px] md:w-[30px] w-5"
+                        class="w-4 md:w-5 lg:w-[40px]"
                         src="/assets/icons/arrow.svg"
                         alt="arrow"
                       />
                     </div>
                     <img
-                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      class="w-4 md:w-5 lg:w-[40px] relative right-4"
                       src="/assets/icons/btn-circle.svg"
                       alt="btn-circle"
                     />
                   </button>
                 </a>
                 <span
-                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                  class="text-base md:text-lg text-gray-800 dark:text-[#ffffff4d] font-manrope"
                 >
                   Web development
                 </span>
@@ -764,54 +813,59 @@
           <div
             class="flex flex-col justify-between w-full gap-8 lg:flex-row lg:items-center"
           >
-            <div class="lg:w-[40%] text-end">
+            <div class="lg:w-[40%] text-center lg:text-end">
               <h2
-                class="text-3xl font-normal text-gray-600 dark:text-gray-300 font-manrope"
+                class="text-2xl font-normal text-gray-600 md:text-3xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.head2"
               >
                 Azerbaijan State Academy of Physical Education and Sport
               </h2>
               <p
-                class="mt-4 text-xl font-bold text-gray-600 dark:text-gray-300 font-manrope"
+                class="mt-2 text-lg font-bold text-gray-600 md:mt-4 md:text-xl dark:text-gray-300 font-manrope"
+                data-i18n="pages.portfolio.texts.text9"
               >
                 We developed a radio station website for "Azerbaijan State
                 Academy of Physical Education and Sport".
               </p>
 
-              <div class="flex flex-col items-end justify-end gap-4 mt-4">
+              <div
+                class="flex flex-col items-center justify-end gap-2 mt-3 lg:items-end md:gap-4 md:mt-4"
+              >
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://asapesfm.az"
                   class="flex items-center justify-center"
                 >
                   <button
-                    class="dark:text-[#3bbeef] text-[#159939] text-base flex items-center"
+                    class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
                   >
                     <div
                       class="flex items-center transition-all duration-300 hover:animate-slideRight"
                     >
                       <p class="pr-2">View project</p>
                       <img
-                        class="lg:w-[40px] md:w-[30px] w-5"
+                        class="w-4 md:w-5 lg:w-[40px]"
                         src="/assets/icons/arrow.svg"
                         alt="arrow"
                       />
                     </div>
                     <img
-                      class="lg:w-[40px] md:w-[30px] w-5 relative right-4"
+                      class="w-4 md:w-5 lg:w-[40px] relative right-4"
                       src="/assets/icons/btn-circle.svg"
                       alt="btn-circle"
                     />
                   </button>
                 </a>
                 <span
-                  class="text-lg text-gray-800 rounded-full dark:text-[#ffffff4d] font-manrope"
+                  class="text-base md:text-lg text-gray-800 dark:text-[#ffffff4d] font-manrope"
                 >
                   Web development
                 </span>
               </div>
             </div>
 
-            <div class="lg:w-[50%]">
+            <div class="lg:w-[50%] mt-4 lg:mt-0">
               <img
                 src="/assets/images/asapes-website.png"
                 alt="ProNeo Website"
@@ -828,19 +882,19 @@
         class="h-[26vh] dark:bg-black bg-transparent rounded-bl-[20%] rounded-br-[20%] w-full"
       ></div>
       <footer
-        class="relative grid grid-cols-4 gap-8 px-10 pt-32 pb-10 bg-white"
+        class="relative grid grid-cols-1 gap-8 px-6 pt-16 pb-10 bg-white sm:grid-cols-2 lg:grid-cols-4"
       >
         <div>
           <a href="#">
             <img
               src="/assets/icons/javachip-logo.svg"
               alt="Javachip"
-              class="w-40"
+              class="w-32 sm:w-40"
             />
           </a>
           <p
-            class="mt-4 text-[#159939] font-bold text-xl"
             data-i18n="footer.logo.head"
+            class="mt-4 text-[#159939] font-bold text-lg sm:text-xl"
           >
             Your Digital Partner
           </p>
@@ -848,66 +902,72 @@
 
         <div>
           <h3
-            class="text-2xl text-[#159939] font-bold mb-4"
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
             data-i18n="footer.titles.quickLinks"
           >
             Quick Links
           </h3>
           <ul class="space-y-2">
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/services/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="common.services"
-                >Our Services</a
               >
+                Our Services
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/portfolio/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="navbar.portfolio"
-                >Portfolio</a
               >
+                Portfolio
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/about/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="navbar.about"
-                >About Us</a
               >
+                About Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/contact/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="pages.home.contact"
-                >Contact Us</a
               >
+                Contact Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/privacy/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="navbar.privacy"
-                >Privacy Policy</a
               >
+                Privacy Policy
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/faq/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="navbar.faq"
-                >FAQs</a
               >
+                FAQs
+              </a>
             </li>
           </ul>
         </div>
 
         <div>
           <h3
-            class="text-2xl text-[#159939] font-bold mb-4"
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
             data-i18n="pages.home.contact"
           >
             Contact Us
@@ -915,7 +975,10 @@
           <div class="flex flex-col space-y-3">
             <div class="flex items-center gap-3">
               <img src="/assets/icons/phone.png" width="18px" alt="Phone" />
-              <a href="tel:+994998822500" class="font-medium text-gray-700">
+              <a
+                href="tel:+994998822500"
+                class="text-sm font-medium text-gray-700 sm:text-base"
+              >
                 +994 99 882 25 00
               </a>
             </div>
@@ -923,7 +986,7 @@
               <img src="/assets/icons/mail.png" width="18px" alt="Mail" />
               <a
                 href="mailto:office@thejavachip.com"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 office@thejavachip.com
               </a>
@@ -936,7 +999,7 @@
               />
               <a
                 href="https://www.google.com/maps/place/The+Javachip+LLC/@40.3655367,49.8309266,17z/data=!3m1!4b1!4m5!3m4!1s0x40307de589f96f27:0x30fb1daa2ffcbc45!8m2!3d40.3655326!4d49.8331153"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 İçərişəhər 18, İlyas Əfəndiyev küç
               </a>
@@ -946,7 +1009,7 @@
 
         <div>
           <h3
-            class="text-2xl text-[#159939] font-bold mb-4"
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
             data-i18n="footer.titles.social"
           >
             Follow us

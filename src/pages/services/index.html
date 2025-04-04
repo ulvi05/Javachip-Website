@@ -89,12 +89,18 @@
 
           <button
             id="menu-btn"
-            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden dark:text-gray-400"
           >
             <img
               id="burger-icon"
               src="/assets/icons/burger-black.svg"
               alt="burger"
+              class="block bg-white dark:hidden"
+            />
+            <img
+              src="/assets/icons/burger-white.svg"
+              alt="burger"
+              class="hidden dark:block"
             />
           </button>
         </div>

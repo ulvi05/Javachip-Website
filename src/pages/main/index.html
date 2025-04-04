@@ -118,13 +118,18 @@
 
           <button
             id="menu-btn"
-            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-white dark:focus:ring-gray-600"
+            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden dark:text-gray-400"
           >
             <img
               id="burger-icon"
               src="/assets/icons/burger-black.svg"
               alt="burger"
-              class="text-white"
+              class="block bg-white dark:hidden"
+            />
+            <img
+              src="/assets/icons/burger-white.svg"
+              alt="burger"
+              class="hidden dark:block"
             />
           </button>
         </div>
@@ -1005,19 +1010,19 @@
         class="h-[26vh] dark:bg-black bg-transparent rounded-bl-[20%] rounded-br-[20%] w-full"
       ></div>
       <footer
-        class="relative grid grid-cols-4 gap-8 px-10 pt-32 pb-10 bg-white"
+        class="relative grid grid-cols-1 gap-8 px-6 pt-16 pb-10 bg-white sm:grid-cols-2 lg:grid-cols-4"
       >
         <div>
           <a href="#">
             <img
               src="/assets/icons/javachip-logo.svg"
               alt="Javachip"
-              class="w-40"
+              class="w-32 sm:w-40"
             />
           </a>
           <p
-            class="mt-4 text-[#159939] font-bold text-xl"
             data-i18n="footer.logo.head"
+            class="mt-4 text-[#159939] font-bold text-lg sm:text-xl"
           >
             Your Digital Partner
           </p>
@@ -1025,66 +1030,72 @@
 
         <div>
           <h3
-            class="text-2xl text-[#159939] font-bold mb-4"
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
             data-i18n="footer.titles.quickLinks"
           >
             Quick Links
           </h3>
           <ul class="space-y-2">
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/services/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="common.services"
-                >Our Services</a
               >
+                Our Services
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/portfolio/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="navbar.portfolio"
-                >Portfolio</a
               >
+                Portfolio
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/about/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="navbar.about"
-                >About Us</a
               >
+                About Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/contact/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="pages.home.contact"
-                >Contact Us</a
               >
+                Contact Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/privacy/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="navbar.privacy"
-                >Privacy Policy</a
               >
+                Privacy Policy
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/faq/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
                 data-i18n="navbar.faq"
-                >FAQs</a
               >
+                FAQs
+              </a>
             </li>
           </ul>
         </div>
 
         <div>
           <h3
-            class="text-2xl text-[#159939] font-bold mb-4"
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
             data-i18n="pages.home.contact"
           >
             Contact Us
@@ -1092,7 +1103,10 @@
           <div class="flex flex-col space-y-3">
             <div class="flex items-center gap-3">
               <img src="/assets/icons/phone.png" width="18px" alt="Phone" />
-              <a href="tel:+994998822500" class="font-medium text-gray-700">
+              <a
+                href="tel:+994998822500"
+                class="text-sm font-medium text-gray-700 sm:text-base"
+              >
                 +994 99 882 25 00
               </a>
             </div>
@@ -1100,7 +1114,7 @@
               <img src="/assets/icons/mail.png" width="18px" alt="Mail" />
               <a
                 href="mailto:office@thejavachip.com"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 office@thejavachip.com
               </a>
@@ -1113,7 +1127,7 @@
               />
               <a
                 href="https://www.google.com/maps/place/The+Javachip+LLC/@40.3655367,49.8309266,17z/data=!3m1!4b1!4m5!3m4!1s0x40307de589f96f27:0x30fb1daa2ffcbc45!8m2!3d40.3655326!4d49.8331153"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 İçərişəhər 18, İlyas Əfəndiyev küç
               </a>
@@ -1123,7 +1137,7 @@
 
         <div>
           <h3
-            class="text-2xl text-[#159939] font-bold mb-4"
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
             data-i18n="footer.titles.social"
           >
             Follow us

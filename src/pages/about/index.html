@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="select-none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/javachip-favicon.ico"
+      type="image/x-icon"
+    />
     <title>About Page</title>
     <link href="../../output.css" rel="stylesheet" />
     <script defer type="module" src="./index.js"></script>
+    <script
+      src="../../components/darkModeToggle.js"
+      type="module"
+      defer
+    ></script>
+    <link rel="stylesheet" href="/src/input.css" />
+
+    <script defer type="module" src="./index.js"></script>
     <script defer type="module" src="../../components/nav.js"></script>
+    <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script defer type="module" src="../../components/i18.js"></script>
   </head>
   <body>
     <nav class="sticky top-0 z-50 bg-white border-gray-200 dark:bg-gray-900">
@@ -89,12 +105,18 @@
 
           <button
             id="menu-btn"
-            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden dark:text-gray-400"
           >
             <img
               id="burger-icon"
               src="/assets/icons/burger-black.svg"
               alt="burger"
+              class="block bg-white dark:hidden"
+            />
+            <img
+              src="/assets/icons/burger-white.svg"
+              alt="burger"
+              class="hidden dark:block"
             />
           </button>
         </div>
@@ -201,82 +223,160 @@
       </div>
     </nav>
 
-    <h1 class="text-xl">About Page</h1>
+    <div
+      class="flex flex-col items-center justify-center p-20 text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white md:px-0"
+    >
+      <div class="gap-8 custom-grid">
+        <div class="p-4 bg-gray-200 dark:bg-gray-800 rounded-xl">
+          <h1 class="text-[#159939] pl-1.5 md:text-6xl text-3xl font-bold">
+            About Us
+          </h1>
+          <p class="px-4 pt-4 pb-2 text-xl">
+            Javachip is a development company with a mission to help businesses
+            and entrepreneurs bring their tech dreams to life. We're a team of
+            tech wizards and creative geniuses who love to help businesses like
+            yours take their online presence to the next level.
+          </p>
+          <p class="px-4 pt-4 pb-2 text-xl">
+            We love nothing more than taking your vision and turning it into a
+            reality. Whether you're looking for a snazzy new website, a mobile
+            app that will take the world by storm, or some AI magic to make your
+            life easier, we've got you covered.
+          </p>
+          <p class="px-4 pt-4 pb-2 text-xl">
+            We understand that every business is unique, and we're all about
+            delivering tailored solutions that fit your specific needs. With our
+            budget-friendly prices, lightning-fast turnaround times, and open
+            and honest communication, we make it our mission to deliver results.
+          </p>
+        </div>
+        <div class="p-4 bg-gray-200 dark:bg-gray-800 rounded-xl">
+          <h2 class="text-[#159939] px-4 md:text-3xl text-xl font-bold">
+            Make sure that the digital reflection of your business is in good
+            hands because it is the first place where your audience will meet
+            your services and products.
+          </h2>
+          <ul class="list-disc list-inside">
+            <li class="px-4 pt-4 pb-2 text-xl">
+              <strong>Our mission</strong> is to provide professional digital
+              services that will assist businesses, individuals and non-profit
+              organizations in promoting their brands and reaching out to a wide
+              range of potential customers all over the globe.
+            </li>
+            <li class="px-4 pt-4 pb-2 text-xl">
+              <strong>Our vision</strong> is to be the world's leading provider
+              of digital solutions by building long-term customer relationships,
+              developing top-notch talent, and continuing innovation.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div></div>
+    </div>
 
     <div>
       <div
         class="h-[26vh] dark:bg-black bg-transparent rounded-bl-[20%] rounded-br-[20%] w-full"
       ></div>
       <footer
-        class="relative grid grid-cols-4 gap-8 px-10 pt-32 pb-10 bg-white"
+        class="relative grid grid-cols-1 gap-8 px-6 pt-16 pb-10 bg-white sm:grid-cols-2 lg:grid-cols-4"
       >
         <div>
           <a href="#">
             <img
               src="/assets/icons/javachip-logo.svg"
               alt="Javachip"
-              class="w-40"
+              class="w-32 sm:w-40"
             />
           </a>
-          <p class="mt-4 text-[#159939] font-bold text-xl">
+          <p
+            data-i18n="footer.logo.head"
+            class="mt-4 text-[#159939] font-bold text-lg sm:text-xl"
+          >
             Your Digital Partner
           </p>
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Quick Links</h3>
+          <h3
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.quickLinks"
+          >
+            Quick Links
+          </h3>
           <ul class="space-y-2">
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/services/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Our Services</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="common.services"
               >
+                Our Services
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/portfolio/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Portfolio</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.portfolio"
               >
+                Portfolio
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/about/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >About Us</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.about"
               >
+                About Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/contact/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Contact Us</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="pages.home.contact"
               >
+                Contact Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/privacy/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Privacy Policy</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.privacy"
               >
+                Privacy Policy
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/faq/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >FAQs</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.faq"
               >
+                FAQs
+              </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Contact Us</h3>
+          <h3
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="pages.home.contact"
+          >
+            Contact Us
+          </h3>
           <div class="flex flex-col space-y-3">
             <div class="flex items-center gap-3">
               <img src="/assets/icons/phone.png" width="18px" alt="Phone" />
-              <a href="tel:+994998822500" class="font-medium text-gray-700">
+              <a
+                href="tel:+994998822500"
+                class="text-sm font-medium text-gray-700 sm:text-base"
+              >
                 +994 99 882 25 00
               </a>
             </div>
@@ -284,7 +384,7 @@
               <img src="/assets/icons/mail.png" width="18px" alt="Mail" />
               <a
                 href="mailto:office@thejavachip.com"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 office@thejavachip.com
               </a>
@@ -297,7 +397,7 @@
               />
               <a
                 href="https://www.google.com/maps/place/The+Javachip+LLC/@40.3655367,49.8309266,17z/data=!3m1!4b1!4m5!3m4!1s0x40307de589f96f27:0x30fb1daa2ffcbc45!8m2!3d40.3655326!4d49.8331153"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 İçərişəhər 18, İlyas Əfəndiyev küç
               </a>
@@ -306,7 +406,12 @@
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Follow us</h3>
+          <h3
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.social"
+          >
+            Follow us
+          </h3>
           <div class="flex gap-3">
             <a
               href="https://www.facebook.com/thejavachipcompany"

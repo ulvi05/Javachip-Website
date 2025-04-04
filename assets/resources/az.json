@@ -78,6 +78,22 @@
         "text1": "Vaxt itirmə",
         "text2": "Elə indi saatı kliklə və qiymət təklifi istə"
       }
+    },
+    "portfolio": {
+      "head1": "Azərbaycan Respublikası Müharibə, Əmək və Silahlı Qüvvələr Veteranları Təşkilatı",
+      "head2": "Azərbaycan Dövlət Bədən Tərbiyəsi və İdman Akademiyası",
+
+      "texts": {
+        "text1": "Təmizlik sektorunda qabaqcıl şirkətlərdən olan \"Horeca\", şirkəti üçün veb sayt hazırladıq.",
+        "text2": "Azərbaycanda turizm brendi olan \"Wide Travel\" şirkəti üçün veb sayt hazırladıq.",
+        "text3": "Sərnişin daşımaçılıq sahəsində qabaqcıl şirkətlərdən olan \"Avtobus\", şirkətinə back-end xidmətimizi göstərdik.",
+        "text4": "Standartlaşdırma və patentləşdirmə şirkəti olan, \"Azstandart Service\" üçün vebsayt hazırladıq.",
+        "text5": "Baytarlıq üçün məhsulların inkişafı və ixracı ilə məşğul olan \"Azuvinet\", şirkəti üçün veb sayt hazırladıq.",
+        "text6": "üçün hazırladığımız vebsayt \"Chevik.az\"",
+        "text7": "\"ProNeo Industrial Engineering\" şirkəti üçün hazırladığımız vebsayt.",
+        "text8": "Azərbaycan Respublikası Müharibə, Əmək və Silahlı Qüvvələr Veteranları Təşkilatı üçün vebsayt hazırladıq.",
+        "text9": "\"Azərbaycan Dövlət Bədən Tərbiyəsi və İdman Akademiyası\" üçün radio vebsaytı hazırladıq."
+      }
     }
   }
 }

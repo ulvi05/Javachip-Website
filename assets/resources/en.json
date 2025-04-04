@@ -76,6 +76,22 @@
         "text1": "Do not waste your time",
         "text2": "Click o’clock and send us your wish list"
       }
+    },
+    "portfolio": {
+      "head1": "Organization of War, Labor, and Armed Forces Veterans of the Republic of Azerbaijan",
+      "head2": "Azerbaijan State Academy of Physical Education and Sport",
+
+      "texts": {
+        "text1": "We developed a website for \"Horeca\", one of the leading companies in the cleaning industry.",
+        "text2": "We developed a website for the tourism company \"Wide Travel\".",
+        "text3": "We provided back-end service for \"Avtobus\", one of the leading companies in the field of passenger transportation.",
+        "text4": "We built a website for standardization and patenting agency, \"Azstandart Service\".",
+        "text5": "We developed a website for \"Azuvinet\", a company that develops and exports veterinary products.",
+        "text6": "A website for \"Chevik.az\"",
+        "text7": "We built a website for the \"ProNeo Industrial Engineering\"",
+        "text8": "We developed a new website for the Organization of War, Labor, and Armed Forces Veterans of the Republic of Azerbaijan.",
+        "text9": "We developed a radio station website for \"Azerbaijan State Academy of Physical Education and Sport\"."
+      }
     }
   }
 }
