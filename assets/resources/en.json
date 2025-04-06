@@ -2,7 +2,7 @@
   "navbar": {
     "home": "Home",
     "portfolio": "Portfolio",
-    "about": "About",
+    "about": "About Us",
     "services": "Services",
     "privacy": "Privacy Policy",
     "faq": "FAQs",
@@ -91,6 +91,64 @@
         "text7": "We built a website for the \"ProNeo Industrial Engineering\"",
         "text8": "We developed a new website for the Organization of War, Labor, and Armed Forces Veterans of the Republic of Azerbaijan.",
         "text9": "We developed a radio station website for \"Azerbaijan State Academy of Physical Education and Sport\"."
+      }
+    },
+    "about": {
+      "introduction": {
+        "text1": "Javachip is a development company with a mission to help businesses and entrepreneurs bring their tech dreams to life. We're a team of tech wizards and creative geniuses who love to help businesses like yours take their online presence to the next level.",
+        "text2": "We love nothing more than taking your vision and turning it into a reality. Whether you're looking for a snazzy new website, a mobile app that will take the world by storm, or some AI magic to make your life easier, we've got you covered.",
+        "text3": "We understand that every business is unique, and we're all about delivering tailored solutions that fit your specific needs. With our budget-friendly prices, lightning-fast turnaround times, and open and honest communication, we make it our mission to deliver results.",
+        "headline": "Make sure that the digital reflection of your business is in good hands because it is the first place where your audience will meet your services and products.",
+        "mission": {
+          "beginning": "Our mission",
+          "rest": "is to provide professional digital services that will assist businesses, individuals and non-profit organizations in promoting their brands and reaching out to a wide range of potential customers all over the globe."
+        },
+        "vision": {
+          "beginning": "Our vision",
+          "rest": "is to be the world's leading provider of digital solutions by building long-term customer relationships, developing top-notch talent, and continuing innovation."
+        }
+      },
+      "why": "Why us",
+      "ourTeam": "Our Team",
+      "reasons": {
+        "team": {
+          "title": "Dream team",
+          "text": "Our team of software wizards is the real deal! They have the skills, experience, and magic touch to make your project successful. With our dream team on your side, you can relax knowing your project is in good hands."
+        },
+        "schedule": {
+          "title": "Speed demon",
+          "text": "Time is money, and we get that. That's why we work fast to get your project completed in a jiffy. No dragging our feet or taking forever to get things done. We'll get the job done quickly, so you can get back to doing what you do best."
+        },
+        "security": {
+          "title": "Budget-friendly",
+          "text": "Hey, we get it. Running a business is expensive. That's why we're all about keeping things budget-friendly without sacrificing quality. We've got flexible pricing options and a transparent billing process that won't leave you feeling like you got ripped off."
+        },
+        "cost": {
+          "title": "Communication is key",
+          "text": "We believe that open and honest communication is the key to a successful project. That's why we'll keep you in the loop every step of the way, whether it's through regular updates, face-to-face meetings, or just a friendly chat."
+        },
+        "dev": {
+          "title": "Tailored to you",
+          "text": "No cookie-cutter solutions here! We know that every business is unique, and we're all about delivering custom software development services that fit your specific needs like a glove."
+        },
+        "assistance": {
+          "title": "Happy, happy, joy, joy",
+          "text": "We're confident that you're going to love what we do for you. In fact, we're so confident that we offer a satisfaction guarantee. If you're not happy with the results, we'll work with you until you are. Because, after all, a happy client is a happy us!"
+        }
+      },
+      "team": {
+        "huseynli": "Chief Executive Officer",
+        "atayev": "Head of Business Development",
+        "rahimov": "Full stack Web Developer",
+        "tagizade": "Full stack Web Developer",
+        "karimli": "AI Team Leader",
+        "salimov": "AI Developer",
+        "alakbarli": "AI Developer",
+        "atakishiyeva": "Digital Marketing Manager",
+        "guliyeva": "Mobile App Developer",
+        "maharramova": "UI/UX designer",
+        "aliyeva": "Graphic Designer",
+        "sayilova": "SMM Manager"
       }
     }
   }

@@ -9,20 +9,19 @@
       type="image/x-icon"
     />
     <title>About Page</title>
-    <link href="../../output.css" rel="stylesheet" />
+    <link href="/src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/input.css" />
     <script defer type="module" src="./index.js"></script>
     <script
       src="../../components/darkModeToggle.js"
       type="module"
       defer
     ></script>
-    <link rel="stylesheet" href="/src/input.css" />
 
-    <script defer type="module" src="./index.js"></script>
-    <script defer type="module" src="../../components/nav.js"></script>
     <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
     <script defer type="module" src="../../components/i18.js"></script>
+    <script defer type="module" src="../../components/nav.js"></script>
   </head>
   <body>
     <nav class="sticky top-0 z-50 bg-white border-gray-200 dark:bg-gray-900">
@@ -42,19 +41,23 @@
           class="flex items-center space-x-2 md:order-2 md:space-x-4 rtl:space-x-reverse"
         >
           <div id="toggle" class="mr-2 toggle"></div>
+
+          <!-- Dropdown language -->
           <div class="relative">
             <button
-              type="button"
               id="language-dropdown-btn"
               class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-900 rounded-lg cursor-pointer dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               <img
-                class="w-5 h-5 rounded-full me-3"
+                id="current-flag"
+                class="w-5 h-5 rounded-full me-2"
                 src="/assets/images/en-flag.png"
                 alt="en"
               />
-              English
+              <span id="current-language" data-i18n="navbar.selectlang"></span>
             </button>
+
+            <!-- Dropdown Menu -->
             <div
               id="language-dropdown-menu"
               class="absolute right-0 z-50 hidden w-40 mt-2 bg-white rounded-lg shadow-lg dark:bg-gray-800"
@@ -64,9 +67,10 @@
                   <a
                     href="#"
                     class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    data-lang="en"
                   >
                     <img
-                      class="w-5 h-5 rounded-full me-3"
+                      class="w-5 h-5 rounded-full me-2"
                       src="/assets/images/en-flag.png"
                       alt="en"
                     />
@@ -77,11 +81,12 @@
                   <a
                     href="#"
                     class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    data-lang="az"
                   >
                     <img
-                      class="w-5 h-5 rounded-full me-3"
+                      class="w-5 h-5 rounded-full me-2"
                       src="/assets/images/az-flag.png"
-                      alt="en"
+                      alt="az"
                     />
                     Azerbaijani
                   </a>
@@ -90,11 +95,12 @@
                   <a
                     href="#"
                     class="flex px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    data-lang="ru"
                   >
                     <img
-                      class="w-5 h-5 rounded-full me-3"
+                      class="w-5 h-5 rounded-full me-2"
                       src="/assets/images/ru-flag.png"
-                      alt="en"
+                      alt="ru"
                     />
                     Russian
                   </a>
@@ -128,6 +134,7 @@
           <ul class="flex flex-col p-4 space-y-2">
             <li>
               <a
+                data-i18n="navbar.home"
                 href="/src/pages/main/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -136,6 +143,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.portfolio"
                 href="/src/pages/portfolio/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -144,6 +152,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.about"
                 href="/src/pages/about/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
@@ -152,10 +161,29 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.services"
                 href="/src/pages/services/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 Services
+              </a>
+            </li>
+            <li>
+              <a
+                data-i18n="navbar.privacy"
+                href="/src/pages/services/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                data-i18n="navbar.faq"
+                href="/src/pages/services/index.html"
+                class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >
+                FAQs
               </a>
             </li>
           </ul>
@@ -172,6 +200,7 @@
           >
             <li>
               <a
+                data-i18n="navbar.home"
                 href="/src/pages/main/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -180,6 +209,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.portfolio"
                 href="/src/pages/portfolio/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -188,6 +218,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.about"
                 href="/src/pages/about/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -196,6 +227,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.services"
                 href="/src/pages/services/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -204,6 +236,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.privacy"
                 href="/src/pages/privacy/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -212,6 +245,7 @@
             </li>
             <li>
               <a
+                data-i18n="navbar.faq"
                 href="/src/pages/faq/index.html"
                 class="block px-3 py-2 tracking-[0.5px] relative text-gray-900 rounded-sm md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-[#2baea1] md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -228,22 +262,34 @@
     >
       <div class="gap-8 custom-grid">
         <div class="p-4 bg-gray-200 dark:bg-gray-800 rounded-xl">
-          <h1 class="text-[#159939] pl-1.5 md:text-6xl text-3xl font-bold">
+          <h1
+            class="text-[#159939] pl-1.5 md:text-6xl text-3xl font-bold"
+            data-i18n="navbar.about"
+          >
             About Us
           </h1>
-          <p class="px-4 pt-4 pb-2 text-xl">
+          <p
+            class="px-4 pt-4 pb-2 text-xl"
+            data-i18n="pages.about.introduction.text1"
+          >
             Javachip is a development company with a mission to help businesses
             and entrepreneurs bring their tech dreams to life. We're a team of
             tech wizards and creative geniuses who love to help businesses like
             yours take their online presence to the next level.
           </p>
-          <p class="px-4 pt-4 pb-2 text-xl">
+          <p
+            class="px-4 pt-4 pb-2 text-xl"
+            data-i18n="pages.about.introduction.text2"
+          >
             We love nothing more than taking your vision and turning it into a
             reality. Whether you're looking for a snazzy new website, a mobile
             app that will take the world by storm, or some AI magic to make your
             life easier, we've got you covered.
           </p>
-          <p class="px-4 pt-4 pb-2 text-xl">
+          <p
+            class="px-4 pt-4 pb-2 text-xl"
+            data-i18n="pages.about.introduction.text3"
+          >
             We understand that every business is unique, and we're all about
             delivering tailored solutions that fit your specific needs. With our
             budget-friendly prices, lightning-fast turnaround times, and open
@@ -251,28 +297,258 @@
           </p>
         </div>
         <div class="p-4 bg-gray-200 dark:bg-gray-800 rounded-xl">
-          <h2 class="text-[#159939] px-4 md:text-3xl text-xl font-bold">
+          <h2
+            class="text-[#159939] px-4 md:text-3xl text-xl font-bold"
+            data-i18n="pages.about.introduction.headline"
+          >
             Make sure that the digital reflection of your business is in good
             hands because it is the first place where your audience will meet
             your services and products.
           </h2>
           <ul class="list-disc list-inside">
             <li class="px-4 pt-4 pb-2 text-xl">
-              <strong>Our mission</strong> is to provide professional digital
-              services that will assist businesses, individuals and non-profit
-              organizations in promoting their brands and reaching out to a wide
-              range of potential customers all over the globe.
+              <strong data-i18n="pages.about.introduction.mission.beginning"
+                >Our mission</strong
+              >
+              <span data-i18n="pages.about.introduction.mission.rest">
+                is to provide professional digital services that will assist
+                businesses, individuals and non-profit organizations in
+                promoting their brands and reaching out to a wide range of
+                potential customers all over the globe.
+              </span>
             </li>
             <li class="px-4 pt-4 pb-2 text-xl">
-              <strong>Our vision</strong> is to be the world's leading provider
-              of digital solutions by building long-term customer relationships,
-              developing top-notch talent, and continuing innovation.
+              <strong data-i18n="pages.about.introduction.vision.beginning"
+                >Our vision
+              </strong>
+              <span data-i18n="pages.about.introduction.vision.rest">
+                is to be the world's leading provider of digital solutions by
+                building long-term customer relationships, developing top-notch
+                talent, and continuing innovation.
+              </span>
             </li>
           </ul>
         </div>
       </div>
 
-      <div></div>
+      <div>
+        <h1
+          class="text-[#159939] pl-1.5 md:text-6xl text-3xl font-bold mt-2 text-center"
+        >
+          Our Team
+        </h1>
+        <div class="gap-8 custom-grid-team">
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px] hidden dark:block"
+                src="/assets/images/employee/Huseynli.png"
+                alt="Huseynli"
+              />
+              <img
+                class="w-[150px] md:w-[200px] block bg-white dark:hidden"
+                src="/assets/images/employee/huseynli-edit.png"
+                alt="Huseynli"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Huseynli</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  Chief Executive Officer
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Atayev.png"
+                alt="Atayev"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Atayev</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  Head of Business Development
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Ragimov.png"
+                alt="Rahimov"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Rahimov</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  Full stack Web Developer
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Tagi.png"
+                alt="Tagi"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Tagi</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  Full stack Web Developer
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Karimli.png"
+                alt="Karimli"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Karimli</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  AI Team Leader
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Salimov.png"
+                alt="Salimov"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Salimov</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  AI Developer
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Alakbarli.png"
+                alt="Alakbarli"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Alakbarli</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  AI Developer
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Atakishiyeva.png"
+                alt="Atakishiyeva"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Atakishiyeva</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  Digital Marketing Manager
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Guliyeva.png"
+                alt="Guliyeva"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Guliyeva</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  Mobile App Developer
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Maharramova.png"
+                alt="Maharramova"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Maharramova</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  UI/UX designer
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Aliyeva.png"
+                alt="Aliyeva"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Aliyeva</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  Graphic Designer
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="flex items-center w-[80%] gap-4 justify-evenly">
+              <img
+                class="w-[150px] md:w-[200px]"
+                src="/assets/images/employee/Sayilova.png"
+                alt="Sayilova"
+              />
+              <div
+                class="text-center text-gray-800 dark:text-white md:text-left"
+              >
+                <h2 class="text-xl font-bold md:text-2xl">Sayilova</h2>
+                <h3 class="text-[#159939] text-base md:text-lg font-light">
+                  SMM Manager
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div>

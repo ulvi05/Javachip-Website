@@ -2,7 +2,7 @@
   "navbar": {
     "home": "Ana Səhifə",
     "portfolio": "Portfolio",
-    "about": "Haqqında",
+    "about": "Haqqımızda",
     "services": "Xidmətlər",
     "privacy": "Məxfilik Siyasəti",
     "faq": "FAQ",
@@ -93,6 +93,64 @@
         "text7": "\"ProNeo Industrial Engineering\" şirkəti üçün hazırladığımız vebsayt.",
         "text8": "Azərbaycan Respublikası Müharibə, Əmək və Silahlı Qüvvələr Veteranları Təşkilatı üçün vebsayt hazırladıq.",
         "text9": "\"Azərbaycan Dövlət Bədən Tərbiyəsi və İdman Akademiyası\" üçün radio vebsaytı hazırladıq."
+      }
+    },
+    "about": {
+      "introduction": {
+        "text1": "Javachip MMC müxtəlif ölçülü bizneslər üçün rəqəmsal həllər təmin etmək məqsədilə yaradılmışdır. Biz ən son və ən yaxşı texnologiyalardan istifadə edərək öz rəqəmsal xidmətlərimizi təqdim edən müştəri yönümlü şirkətik.",
+        "text2": "Müştərilərimizin onlayn uğur qazanmasına kömək edəcək keyfiyyətli, sərfəli və istifadəçi dostu rəqəmsal məhsullar təqdim edirik. Javachip xüsusi hazırlanmış həllər ilə biznes ehtiyaclarınızı həll etmək üçün fərdi yanaşma təklif edir.",
+        "text3": "Bilik və təcrübəmizlə ən yaxşı həllər və xidmətlər təqdim etməyə qadirik. Fərdi ehtiyaclarınızı anlamaq və bu ehtiyaclara cavab verən həll yolu hazırlamaq üçün sizinlə sıx əməkdaşlıq etməyə hazırıq.",
+        "headline": "Biznesinizin rəqəmsal əksinin etibarlı əllərdə olduğundan əmin olun, çünki bu, potensial müştərilərinizin xidmət və məhsullarınızla tanış olacağı ilk yerdir.",
+        "mission": {
+          "beginning": "Missiyamız",
+          "rest": "bizneslərə, fiziki şəxslərə və qeyri-kommersiya təşkilatlarına öz brendlərini tanıtmaqda və bütün dünyada geniş potensial müştərilərə çatmaqda kömək edəcək rəqəmsal xidmətlər təqdim etməkdir."
+        },
+        "vision": {
+          "beginning": "Vizyonumuz",
+          "rest": "davamlı innovasiya və uzunmüddətli müştəri əlaqələri quraraq dünyanın aparıcı rəqəmsal həllər təminatçısı olmaqdır."
+        }
+      },
+      "why": "Niyə biz",
+      "ourTeam": "Bizim komanda",
+      "reasons": {
+        "team": {
+          "title": "Arzuladığın komanda",
+          "text": "Komandamızın hər bir üzvü ən yeni texnologiyalardan istifadə edərək istənilən çətinlikdə olan layihənizi hazırlama bacarığına malikdir."
+        },
+        "schedule": {
+          "title": "Vaxtında təslimat",
+          "text": "Layihələrin planlanması zamanı, biz agile metodologiyasından istifadə edirik. Müştərilərimizə istədikləri sifarişi müqaviləyə əsasən tam zamanında ən keyfiyyətli şəkildə təqdim edirik."
+        },
+        "security": {
+          "title": "Münasib qiymət",
+          "text": "Təqdim etdiyimiz bütün rəqəmsal məhsul və xidmətlər, istər kiçik və yeni yaranmış biznes, istərsə də böyük korporativ şirkət olmağınızdan asılı olmayaraq, biznesiniz üçün münasib qiymətlərlədir."
+        },
+        "cost": {
+          "title": "Effektiv kommunikasiya",
+          "text": "Müştərilərimizlə hər zaman effektiv ünsiyyət qurmağımız vacibdir. Bu, onlara ən yaxşı xidməti göstərməyə və ehtiyaclarının ödənilməsini təmin etməyə imkan verir."
+        },
+        "dev": {
+          "title": "Sizə uyğunlaşdırılmış",
+          "text": "Hər bir şirkətin unikal olduğunu bilirik və hamımız fərdi ehtiyaclarınıza uyğun xüsusi proqram təminatını təqdim etmək üçün buradayıq."
+        },
+        "assistance": {
+          "title": "Dəstək",
+          "text": "Öz sahələrində professional olan komandamızın hər bir üzvü, sifarişinizi təslim etdikdən sonra yaranan bütün sual və problemlərinizi ən qısa müdddətdə həll etməyə hazırdır."
+        }
+      },
+      "team": {
+        "huseynli": "İcraçı Direktor",
+        "atayev": "Biznesin İnkişafı Şöbəsinin Müdiri",
+        "rahimov": "Full stack Veb Developer",
+        "tagizade": "Full stack Veb Developer",
+        "karimli": "Süni İntellekt Komanda Rəhbəri",
+        "salimov": "Süni İntellekt Mühəndisi",
+        "alakbarli": "Süni İntellekt Mühəndisi",
+        "atakishiyeva": "Rəqəmsal Marketinq Meneceri",
+        "guliyeva": "Mobil Proqram Developer",
+        "maharramova": "UI/UX Dizayner",
+        "aliyeva": "Qrafik Dizayner",
+        "sayilova": "SMM Menecer"
       }
     }
   }
