@@ -1,12 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
       textShadow: {
         blueOutline:
           "1px 1px 0 #3bbeef, -1px -1px 0 #3bbeef, 1px -1px 0 #3bbeef, -1px 1px 0 #3bbeef, 1px 1px 0 #3bbeef",
+      },
+      backgroundImage: {
+        "custom-radial":
+          "radial-gradient(42.36% 42.36% at 50% 50%, rgba(21,153,57,0.2) 0%, rgba(0,0,0,0.2) 100%)",
+        "custom-radial-dark":
+          "radial-gradient(42.36% 42.36% at 50% 50%, rgba(21,153,57,0) 0%, hsla(0,0%,100%,.54) 100%)",
+        "custom-radial2":
+          "radial-gradient(42.36% 42.36% at 50% 50%, rgba(21,153,57,0.48) 0%, rgba(255,255,255,0.54) 100%)",
+        "custom-radial2-dark":
+          "radial-gradient(42.36% 42.36% at 50% 50%, rgba(21,153,57,0.8) 0%, rgba(255,255,255,0.2) 100%)",
       },
       container: {
         center: true,
