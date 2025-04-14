@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="select-none" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Page</title>
     <link href="/src/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="/src/input.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/javachip-favicon.ico"
+      type="image/x-icon"
+    />
+    <script
+      src="../../components/darkModeToggle.js"
+      type="module"
+      defer
+    ></script>
     <script defer type="module" src="./index.js"></script>
     <script defer type="module" src="../../components/nav.js"></script>
+    <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script defer type="module" src="../../components/i18.js"></script>
   </head>
   <body>
     <nav class="sticky top-0 z-50 bg-white border-gray-200 dark:bg-gray-900">
@@ -112,10 +125,11 @@
             />
           </button>
         </div>
+
         <!-- Mobile Menu -->
         <div
-          id="navbar-language"
-          class="absolute left-0 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+          id="mobile-navbar"
+          class="absolute left-0 z-40 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
         >
           <ul class="flex flex-col p-4 space-y-2">
             <li>
@@ -157,7 +171,7 @@
             <li>
               <a
                 data-i18n="navbar.privacy"
-                href="/src/pages/services/index.html"
+                href="/src/pages/privacy/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 Privacy Policy
@@ -166,7 +180,7 @@
             <li>
               <a
                 data-i18n="navbar.faq"
-                href="/src/pages/services/index.html"
+                href="/src/pages/faq/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 FAQs
@@ -176,13 +190,12 @@
         </div>
 
         <!-- Desktop Menu -->
-
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-language"
+          id="desktop-navbar"
         >
           <ul
-            class="flex-col hidden p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:items-center md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 lg:flex"
+            class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:items-center md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 lg:flex"
           >
             <li>
               <a
@@ -242,83 +255,250 @@
         </div>
       </div>
     </nav>
+    <div
+      class="flex flex-col items-center justify-start p-5 text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white md:px-0 font-manrope"
+    >
+      <div
+        class="flex flex-col items-center justify-start text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white md:px-0"
+      >
+        <div class="flex flex-col w-full h-full md:flex-row">
+          <div class="contact-aside rounded-xl">
+            <h2 class="my-4 text-3xl font-bold">Contact Us</h2>
+            <p class="mb-6">
+              Kindly fill the form with details regarding your inquiry. We'd
+              love to collaborate with you.
+            </p>
 
-    <h1 class="text-3xl bg-slate-800">Contact Page</h1>
+            <div class="flex flex-col mb-4 space-y-3">
+              <div class="flex items-center space-x-2">
+                <img src="/assets/icons/phone.png" width="20" alt="Phone" />
+                <a
+                  href="tel:+994998822500"
+                  class="text-sm font-medium text-white sm:text-base"
+                >
+                  +994 99 882 25 00
+                </a>
+              </div>
+
+              <div class="flex items-center space-x-2">
+                <img src="/assets/icons/mail.png" width="20" alt="Mail" />
+                <a
+                  href="mailto:office@thejavachip.com"
+                  class="text-sm font-medium text-white sm:text-base"
+                >
+                  office@thejavachip.com
+                </a>
+              </div>
+            </div>
+
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/thejavachipcompany"
+                class="p-2 border rounded-full"
+                ><svg width="1em" height="1em" viewBox="0 0 24 24">
+                  <path
+                    fill="#ffffff"
+                    d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"
+                  ></path></svg
+              ></a>
+              <a
+                href="https://www.instagram.com/the.javachip.global/"
+                class="p-2 border rounded-full"
+                ><svg width="1em" height="1em" viewBox="0 0 24 24">
+                  <path
+                    fill="#ffffff"
+                    d="M12 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0a1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058c-.784.037-1.31.142-1.798.332a2.886 2.886 0 0 0-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029c.037.783.142 1.31.331 1.797c.17.435.37.748.702 1.08c.337.336.65.537 1.08.703c.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058c.782-.037 1.309-.142 1.797-.331a2.92 2.92 0 0 0 1.08-.702c.337-.337.538-.65.704-1.08c.19-.493.296-1.02.332-1.8c.052-1.104.058-1.49.058-4.029c0-2.474-.007-2.878-.058-4.029c-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08a2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06c1.065.05 1.79.217 2.428.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465c-1.066.047-1.405.06-4.122.06c-2.717 0-3.056-.01-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153a4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"
+                  ></path></svg
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/the-javachip/"
+                class="p-2 border rounded-full"
+                ><svg width="1em" height="1em" viewBox="0 0 24 24">
+                  <path
+                    fill="#ffffff"
+                    d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
+                  ></path></svg
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="w-full p-10 text-black bg-white contact-form dark:text-white rounded-xl dark:bg-[#101010] md:w-1/2"
+          >
+            <form class="space-y-6">
+              <div>
+                <label class="block mb-2 text-sm font-medium">Your Name*</label>
+                <input
+                  type="text"
+                  required
+                  class="w-full px-4 py-2 text-black bg-white border border-gray-300 rounded dark:bg-[#101010] dark:text-white"
+                />
+              </div>
+              <div>
+                <label class="block mb-2 text-sm font-medium"
+                  >Your Email*</label
+                >
+                <input
+                  type="email"
+                  required
+                  class="w-full px-4 py-2 text-black bg-white border border-gray-300 rounded dark:bg-[#101010] dark:text-white"
+                />
+              </div>
+              <div>
+                <label class="block mb-2 text-sm font-medium"
+                  >Your Phone Number</label
+                >
+                <input
+                  type="text"
+                  placeholder="+994"
+                  class="w-full px-4 py-2 text-black bg-white border border-gray-300 rounded dark:bg-[#101010] dark:text-white"
+                />
+              </div>
+              <div>
+                <label class="block mb-2 text-sm font-medium">Services</label>
+                <input
+                  type="text"
+                  class="w-full px-4 py-2 text-black bg-white border border-gray-300 rounded dark:bg-[#101010] dark:text-white"
+                />
+              </div>
+              <div>
+                <label class="block mb-2 text-sm font-medium"
+                  >Share Your Message*</label
+                >
+                <textarea
+                  rows="4"
+                  required
+                  class="w-full px-4 py-2 text-black bg-white border border-gray-300 rounded resize-none dark:bg-[#101010] dark:text-white"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="dark:text-[#3bbeef] text-[#159939] text-sm md:text-base flex items-center"
+              >
+                <div
+                  class="flex items-center transition-all duration-300 hover:animate-slideRight"
+                >
+                  <p class="pr-2">Send Message</p>
+                  <img
+                    class="w-4 md:w-5 lg:w-[40px]"
+                    src="/assets/icons/arrow.svg"
+                    alt="arrow"
+                  />
+                </div>
+                <img
+                  class="w-4 md:w-5 lg:w-[40px] relative right-4"
+                  src="/assets/icons/btn-circle.svg"
+                  alt="btn-circle"
+                />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div>
       <div
         class="h-[26vh] dark:bg-black bg-transparent rounded-bl-[20%] rounded-br-[20%] w-full"
       ></div>
       <footer
-        class="relative grid grid-cols-4 gap-8 px-10 pt-32 pb-10 bg-white"
+        class="relative grid grid-cols-1 gap-8 px-6 pt-16 pb-10 bg-white sm:grid-cols-2 lg:grid-cols-4"
       >
         <div>
           <a href="#">
             <img
               src="/assets/icons/javachip-logo.svg"
               alt="Javachip"
-              class="w-40"
+              class="w-32 sm:w-40"
             />
           </a>
-          <p class="mt-4 text-[#159939] font-bold text-xl">
+          <p
+            data-i18n="footer.logo.head"
+            class="mt-4 text-[#159939] font-bold text-lg sm:text-xl"
+          >
             Your Digital Partner
           </p>
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Quick Links</h3>
+          <h3
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.quickLinks"
+          >
+            Quick Links
+          </h3>
           <ul class="space-y-2">
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/services/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Our Services</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="common.services"
               >
+                Our Services
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/portfolio/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Portfolio</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.portfolio"
               >
+                Portfolio
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/about/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >About Us</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.about"
               >
+                About Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/contact/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Contact Us</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="pages.home.contact"
               >
+                Contact Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/privacy/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Privacy Policy</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.privacy"
               >
+                Privacy Policy
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/faq/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >FAQs</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.faq"
               >
+                FAQs
+              </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Contact Us</h3>
+          <h3
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="pages.home.contact"
+          >
+            Contact Us
+          </h3>
           <div class="flex flex-col space-y-3">
             <div class="flex items-center gap-3">
               <img src="/assets/icons/phone.png" width="18px" alt="Phone" />
-              <a href="tel:+994998822500" class="font-medium text-gray-700">
+              <a
+                href="tel:+994998822500"
+                class="text-sm font-medium text-gray-700 sm:text-base"
+              >
                 +994 99 882 25 00
               </a>
             </div>
@@ -326,7 +506,7 @@
               <img src="/assets/icons/mail.png" width="18px" alt="Mail" />
               <a
                 href="mailto:office@thejavachip.com"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 office@thejavachip.com
               </a>
@@ -339,7 +519,7 @@
               />
               <a
                 href="https://www.google.com/maps/place/The+Javachip+LLC/@40.3655367,49.8309266,17z/data=!3m1!4b1!4m5!3m4!1s0x40307de589f96f27:0x30fb1daa2ffcbc45!8m2!3d40.3655326!4d49.8331153"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 İçərişəhər 18, İlyas Əfəndiyev küç
               </a>
@@ -348,7 +528,12 @@
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Follow us</h3>
+          <h3
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.social"
+          >
+            Follow us
+          </h3>
           <div class="flex gap-3">
             <a
               href="https://www.facebook.com/thejavachipcompany"

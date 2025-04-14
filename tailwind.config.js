@@ -43,6 +43,7 @@ module.exports = {
         slideIn: "slideIn 0.3s ease-in-out forwards",
         slideOut: "slideOut 0.3s ease-in-out forwards",
         slideRight: "slideRight 0.3s ease-in-out forwards",
+        slideDownFade: "slideDownFade 0.6s ease-out",
       },
       keyframes: {
         slideIn: {
@@ -56,6 +57,16 @@ module.exports = {
         slideRight: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(0.5em)" },
+        },
+        slideDownFade: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
         },
       },
     },

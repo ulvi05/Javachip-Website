@@ -152,6 +152,138 @@
         "aliyeva": "Qrafik Dizayner",
         "sayilova": "SMM Menecer"
       }
+    },
+    "services": {
+      "web": {
+        "text1": "Bir biznes sahibi olaraq müştərilərinizi cəlb etmək və brendinizi tanıtmaq üçün müasir və funksional vebsaytın vacibliyini bilirsiniz. Doğru vebsayt sizə rəqiblərinizdən fərqlənməyə və satışlarınızı artırmağa kömək edə bilər. Vebsayt potensial müştərilərə nə etdiyiniz, şirkətinizlə necə əlaqə quracaqları və məhsul və ya xidmətlərinizi necə satın alacaqları barədə məlumat verir. Veb sayt brendinq və marketinq strategiyasının vacib hissəsidir.",
+        "text2": "Buna görə də bizim veb inkişaf xidmətlərimiz sizin fərdi ehtiyaclarınıza uyğunlaşdırılıb. İstər sadə scroll sayt istəyən kiçik biznes, istərsə də mürəkkəb e-ticarət platforması tələb edən böyük müəssisə olsun, bizim bu layihələri uğurla təhvil vermək üçün yetərli təcrübəmiz var. Komandamız prosesin hər bir addımında sizinlə birgə işləyərək, şirkət vizyonunuza uyğun bir saytın hazırlanmasını təmin edəcək. Biz başa düşürük ki, yaxşı bir vebsayt sadəcə müasir dizayndan ibarət deyil. O, funksional, sürətli və responsiv olmalıdır. Məqsədimiz müştərilərinizin sevəcəyi və konversiyaya yönümlü bir veb saytınızın olmasıdır. ",
+        "reasons": [
+          "Sizə layiq bir vebsayt: Köhnə vebsaytlarla vidalaşmağın və biznesinizi böyüdəcək mükəmməl və müasir onlayn mövcudluqla salamlaşmağın vaxtıdır.",
+          "Rəqabət Üstünlüyü: Yaxşı dizayn edilmiş veb sayt rəqabət üstünlüyü verə bilər və nəticədə sizi öz sahənizdə arzulanan brendə çevirə bilər.",
+          "Sürətli Yüklənmə, Daha Çox Konversiya: Sürətli, responsiv veb-sayt xoşbəxt müştərilər və artan konversiya deməkdir.",
+          "Asan Saxlanma: Mürəkkəb veb sayt idarəçiliyi ilə sağollaşın, çünki bizim həllimiz vebsaytınızı yeniləməyi və saxlamağı asanlaşdıracaq.",
+          "24/7 İşləyən Vebsayt: Veb saytınız biznesiniz üçün 24/7 satış meneceri olacaq.",
+          "İstənilən Cihazda Mükəmməl Görünüş: Hazırladığımız vebsayt istənilən cihaz üçün optimizasiya olunur, ona görə də, hər bir cihazda qüsursuz görünəcək."
+        ]
+      },
+      "mobile": {
+        "text1": "Günümüzdə smartfonlar və digər texnoloji cihazlar bütün sektorlarda və bazarlarda önəmli bir yer tutmuşdur. Bilirsiniz ki, daha çox insanın hər şey üçün telefonlarına güvəndiyi bir vaxtda mobil proqrama investisiya etmək şirkətiniz üçün önəmli bir qərar ola bilər. Mobil tətbiqini qurmaqla biznesiniz bir cihazda məhdudlaşmayacaq, istənilən cihazda hər kəs üçün əlçatan olacaqdır. Tətbiq müştərilərinizin biznesinizlə əlaqə saxlamasını və ehtiyac duyduqları məhsul və xidmətlərə daxil olmasını asanlaşdıran istifadəçi dostu olmalıdır.",
+        "text2": "Çoxillik təcrübəyə malik komandamız biznes ehtiyaclarınıza uyğunlaşdırılmış və gözləntilərinizi üstələyən fərdi mobil proqrama sahib olmağınıza kömək etmək üçün buradadır. Tətbiqinizin təkcə vizual olaraq heyrətamiz deyil, həm də yüksək funksional və istifadəsi asan olmasını təmin etmək üçün əlimizdən gələni edəcəyik. ",
+        "reasons": [
+          "App-Solute Həll: Fərdi hazırlanmış mobil proqramla biznesinizi üst səviyyəyə qaldırmağa hazır olun!",
+          "Sektorda Cool Şirkət: Unikal olmağınızla fərqlənin və müştərilərinizə mükəmməl mobil tətbiqetməniz ilə rəqabətdə sizi seçmək üçün səbəb verin.",
+          "İstifadəçi Dostu Əyləncə: Müştərilərinizin geri qayıtmasını təmin edəcək istifadəçi dostu, əyləncəli və interaktiv mobil proqrama sahib olun.",
+          "Ulduzlar Qazanmaq: Mobil tətbiq dünyanın harasında olmalarından asılı olmayaraq daha geniş auditoriyaya çatmağınıza kömək edə bilər. İstifadəçilərin verdikləri ulduzlar biznesinizi inkişaf etdirmək üçün sizə güc verəcək.",
+          "Mobil Marvel: Müştərilərinizi ildırım sürətli yükləmə müddətləri, asan naviqasiya və lazım olan bütün funksiyalarla heyran edin.",
+          "Hər Zaman Bağlantıda: Mobil proqramla şirkətiniz müştərilərinizin ovucları içində olacaq."
+        ]
+      },
+      "ai": {
+        "text1": "Təsəvvür edin ki, məlumatların daxil edilməsinə əsaslanaraq qərarlar qəbul edən, tək başına öyrənə və işləyə bilən maşınlardan ibarət komandanız var. Süni intellektlə bu arzu artıq realdır və bu imkanlar sonsuzdur! Səhiyyədən nəqliyyata, logistikadan bank işinə və pərakəndə satışdan telekommunikasiyaya qədər süni intellekt biznes əməliyyatlarını dəyişdirmək və sizi yeni uğur zirvələrinə çatdırmaq gücünə malikdir. Biznesinizin böyüməsinə və uğur qazanmasına kömək etmək üçün düzgün texnologiyalara sahib olmağın nə qədər vacib olduğunu bilirik və buna görə də sizin xidmətinizdəyik.",
+        "text2": "Javachip-də biz sizə ağıllı və avtomatlaşdırılmış həllər təqdim etməklə biznes məqsədlərinizə çatmağınıza kömək edəcəyik. Ən müasir süni intellekt texnologiyalarımızla müştərilərinizə onların unikal ehtiyaclarına cavab verən fərdi təcrübə təklif edə bilərsiniz. Maşın öyrənməsi, təbii dil emalı (NLP), proqnozlaşdırma və ya optimallaşdırma təklif etdiyimiz süni intellekt həllərindəndir. Süni intellekt komandamız texnologiyanın gücündən istifadə edərək biznesinizi üst səviyyəyə qaldırmağa kömək edə biləcək innovativ həllər təqdim etməyə hazırdır. ",
+        "reasons": [
+          "Daha ağıllı biznes qərarları: Süni intellekt həlləri ilə instinktlərinizə yox, dəqiq məlumatlara əsaslanan qərarlara güvənməlisiniz. ",
+          "Zehni oxuma: Yaxşı, tam olaraq zehni oxumaq deyil, amma elə buna yaxındır! Fərdi təcrübələr təqdim etmək və müştəri məmnuniyyətini artırmaq üçün müştəri davranışını, seçimlərini və rəylərini təhlil edə bilərsiniz.",
+          "Artan Məhsuldarlıq: Süni intellekt sizin və komandanızın gördüyü rutin işləri avtomatlaşdıra bilər.",
+          "Keyfiyyətin yox, xərclərin azaldılması: Süni intellekt yüksək keyfiyyətli nəticələri qoruyarkən xərclərinizi azaltmağa kömək edə bilər.",
+          "Gələcək Buradadır: Rəqabətdən öndə olun və texnologiyanın gücü ilə yeni nailiyyətlər əldə edin.",
+          "Sərhədsiz İmkanlar: Süni intellekt ilə imkanlar sonsuzdur! İş proseslərinizi təkmilləşdirmək üçün çatbotlardan tutmuş proqnozlaşdırıcı analitikaya qədər yeni imkanlar şirkətinizin böyüməsinə şərait yaradacaq."
+        ]
+      },
+      "cyber": {
+        "text1": "Bugünkü rəqəmsal dünyada onlayn platformalarda mövcud olan hər bir şirkət kiberhücumların riski altındadır. Buna görə də, veb saytınız və rəqəmsal aktivləriniz həmişə qorunmalıdır. Təəssüf ki, məlumatların pozulmasının nəticələri şirkət üçün inanılmaz dərəcədə zərərli ola bilər, bu həm müştərilərinizə, həm də biznesinizə təsir edə bilər. ",
+        "text2": "Amma biz kömək etmək üçün buradayıq. Biz bilirik ki, sizin diqqətiniz şirkətin inkişafı və uğur qazanmasındadır və məşğul olmaq istədiyiniz son şey kiberhücumdur. Buna görə də biz sistemlərinizi qorumaq üçün hərtərəfli kibertəhlükəsizlik xidmətləri təklif edirik. Bizim xidmətlərimizə firewalllar, anti-virus müdafiəsi, müdaxilənin aşkarlanması və digər kibertəhlükəsizlik xidmətləri aiddir. ",
+        "reasons": [
+          "Gecələr Rahat Yuxu: Hər an biznesinizin kiberhücumlardan qorunduğundan əmin ola bilərsiniz.",
+          "Onlayn Dünyanızı Təhlükəsiz Saxlayın: Yüksək səviyyəli kibertəhlükəsizlik həllərimizlə həssas məlumatlarınızı qoruyun.",
+          "Müştərilərinizin Gözündə Qəhrəman olun: Kibertəhlükəsizlik xidmətlərinə sərmayə qoymaqla müştərilərinə onların məxfiliyinə və təhlükəsizliyinə dəyər verdiyinizi göstərin.",
+          "Növbəti Xəbər Başlığı Olmayın: Biznesinizi kiberhücumun növbəti hədəfinə çevrilməkdən qoruya bilərsiniz.",
+          "Biznesinizi Hack-Proof edin: Bizim hərtərəfli təhlükəsizlik həllərimizlə şirkət və müştərilərinizi məlumatların pozulmasının zərərli təsirlərindən qoruyun.",
+          "Effektiv Xidmət: İstifadəsi asan, effektiv kibertəhlükəsizlik həllərimizlə hər şey sadə olacaqdır."
+        ]
+      },
+      "digital": {
+        "comment": "Saytınızın axtarış motorlarına uyğun optimizasiyası həm də brend şüurunu artırmaq, müştərilərlə əlaqələr qurmaq və öz sektorunuzda etibarlı nüfuz sahibi olmaq üçün yaxşı bir seçimdir.",
+        "package": "xidmətinə daxil olanlar:",
+        "advantages": "Üstünlükləri:",
+        "seo": {
+          "advantages": [
+            "Brend etibarının artması",
+            "Axtarış sistemlərində üzvi olaraq üst sıralarda olmaq",
+            "Veb sayta artan trafik",
+            "Təkmilləşdirilmiş istifadəçi təcrübəsi",
+            "Brend şüurunun artması",
+            "Daha yaxşı istifadəçi təcrübəsi",
+            "Uzunmüddətli marketinq strategiyası",
+            "Artan potensial müştəri və satışlar",
+            "Daha yüksək investisiya gəliri",
+            "Rəqabət üstünlüyü"
+          ],
+          "package": [
+            "Vebsayt auditi",
+            "SEO strategiyasının hazırlanması",
+            "Açar sözlərin təyini",
+            "Texniki SEO",
+            "Şəkillərin optimizasiyası",
+            "Schema markup ",
+            "Səhifə daxili SEO",
+            "Semantik SEO",
+            "Rəqiblərin təhlili",
+            "Məzmun optimizasiyası",
+            "Backlink auditi",
+            "Link yaradılması",
+            "SEO əsaslı bloq",
+            "Aylıq hesabat"
+          ]
+        },
+        "smm": {
+          "advantages": [
+            "Brend şüurunun artması",
+            "Təkmilləşdirilmiş müştəri əlaqəsi",
+            "Daha çox konversiya",
+            "Hədəf kütlənin daha yaxşı təyini",
+            "Brend reputasiyası",
+            "Artan potensial müştəri və satışlar",
+            "Artan müştəri məmnuniyyəti",
+            "Bazar məlumatlarının əldə olunması",
+            "Rəqabət üstünlüyü",
+            "Müştəri loyallığının yaxşılaşdırılması"
+          ],
+          "package": [
+            "SMM strategiyasının hazırlanması",
+            "Aylıq məzmun planı",
+            "Biznes hesablarının yaradılması və idarə olunması",
+            "Yaradıcı postlar",
+            "Reklam kampaniyalarının yaradılması",
+            "Zənglər və mesajlar üçün avtomatlaşdırılmış cavab sistemi",
+            "Professional foto və video çəkilişi",
+            "Müxtəlif yarışların təşkili",
+            "Aylıq hesabat"
+          ]
+        },
+        "sem": {
+          "advantages": [
+            "Veb-sayt trafikinin artması",
+            "Xərc baxımından səmərəli",
+            "Hədəf auditoriyasına uyğun reklam",
+            "Ölçülə bilən nəticələr",
+            "Brend şüurunun artması",
+            "Artan konversiya ",
+            "Daha yaxşı istifadəçi təcrübəsi",
+            "Rəqabət üstünlüyü",
+            "Reklam büdcəsinə nəzarət",
+            "Uzunmüddətli faydalar"
+          ],
+          "package": [
+            "Açar sözlərin araşdırılması və analizi ",
+            "Rəqiblərin reklam kampaniyalarının analizi və təhlili",
+            "Reklam kampaniyalarının yaradılması ",
+            "Reklam kampaniyalarının monitorinqi və optimizasiyası",
+            "Reklam üçün A\\B testi",
+            "Performans hesabatlarının hazırlanması"
+          ]
+        }
+      }
     }
   }
 }

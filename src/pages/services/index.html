@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="select-none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/images/javachip-favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Our Services</title>
     <link href="/src/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="/src/input.css" />
     <script defer type="module" src="./index.js"></script>
+    <script
+      src="../../components/darkModeToggle.js"
+      type="module"
+      defer
+    ></script>
+
+    <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script defer type="module" src="../../components/i18.js"></script>
     <script defer type="module" src="../../components/nav.js"></script>
   </head>
   <body>
@@ -112,10 +126,11 @@
             />
           </button>
         </div>
+
         <!-- Mobile Menu -->
         <div
-          id="navbar-language"
-          class="absolute left-0 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+          id="mobile-navbar"
+          class="absolute left-0 z-40 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
         >
           <ul class="flex flex-col p-4 space-y-2">
             <li>
@@ -157,7 +172,7 @@
             <li>
               <a
                 data-i18n="navbar.privacy"
-                href="/src/pages/services/index.html"
+                href="/src/pages/privacy/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 Privacy Policy
@@ -166,7 +181,7 @@
             <li>
               <a
                 data-i18n="navbar.faq"
-                href="/src/pages/services/index.html"
+                href="/src/pages/faq/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 FAQs
@@ -176,13 +191,12 @@
         </div>
 
         <!-- Desktop Menu -->
-
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-language"
+          id="desktop-navbar"
         >
           <ul
-            class="flex-col hidden p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:items-center md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 lg:flex"
+            class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:items-center md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 lg:flex"
           >
             <li>
               <a
@@ -243,82 +257,619 @@
       </div>
     </nav>
 
-    <h1>Services</h1>
+    <main
+      class="flex flex-col items-center justify-center p-20 text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white md:px-0"
+    >
+      <nav class="flex justify-center w-full px-4 mt-4 mb-8">
+        <ul
+          id="tabs"
+          class="flex flex-wrap items-center justify-center gap-4 mt-6 list-none"
+        >
+          <li>
+            <div class="flex flex-col items-center">
+              <button
+                class="tab-btn text-sm sm:text-base text-black dark:text-white transition-colors dark:hover:text-[#3bbeef] dark:focus:text-[#3bbeef] hover:text-[#159939] focus:text-[#159939]"
+                data-tab="web"
+                data-i18n="common.web"
+              >
+                Web Development
+              </button>
+              <div
+                class="tab-line h-0.5 w-full bg-black dark:bg-white opacity-0 transition-all duration-300"
+              ></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="flex flex-col items-center">
+              <button
+                class="tab-btn text-sm sm:text-base text-black dark:text-white transition-colors dark:hover:text-[#3bbeef] dark:focus:text-[#3bbeef] hover:text-[#159939] focus:text-[#159939]"
+                data-tab="mobile"
+                data-i18n="common.mobile"
+              >
+                Mobile App Development
+              </button>
+              <div
+                class="tab-line h-0.5 w-full bg-black dark:bg-white opacity-0 transition-all duration-300"
+              ></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="flex flex-col items-center">
+              <button
+                class="tab-btn text-sm sm:text-base text-black dark:text-white transition-colors dark:hover:text-[#3bbeef] dark:focus:text-[#3bbeef] hover:text-[#159939] focus:text-[#159939]"
+                data-tab="ai"
+                data-i18n="common.ai"
+              >
+                Artificial Intelligence
+              </button>
+              <div
+                class="tab-line h-0.5 w-full bg-black dark:bg-white opacity-0 transition-all duration-300"
+              ></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="flex flex-col items-center">
+              <button
+                class="tab-btn text-sm sm:text-base text-black dark:text-white transition-colors dark:hover:text-[#3bbeef] dark:focus:text-[#3bbeef] hover:text-[#159939] focus:text-[#159939]"
+                data-tab="cyber"
+                data-i18n="common.cyber"
+              >
+                Cybersecurity
+              </button>
+              <div
+                class="tab-line h-0.5 w-full bg-black dark:bg-white opacity-0 transition-all duration-300"
+              ></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="flex flex-col items-center">
+              <button
+                class="tab-btn text-sm sm:text-base text-black dark:text-white transition-colors dark:hover:text-[#3bbeef] dark:focus:text-[#3bbeef] hover:text-[#159939] focus:text-[#159939]"
+                data-tab="marketing"
+                data-i18n="common.digital"
+              >
+                Digital Marketing
+              </button>
+              <div
+                class="tab-line h-0.5 w-full bg-black dark:bg-white opacity-0 transition-all duration-300"
+              ></div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="web" class="hidden tab-content">
+        <section class="space-y-16">
+          <div
+            class="flex flex-col items-center gap-6 p-4 lg:flex-row justify-evenly animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <h1
+                class="text-4xl md:text-5xl p-2 dark:text-[#3bbeef] text-[#159939] font-bold"
+                data-i18n="common.web"
+              >
+                Web Development
+              </h1>
+              <p
+                class="sm:max-w-[700px] max-w-[450px]"
+                data-i18n="pages.services.web.text1"
+              >
+                As a business owner, you know the importance of a professional
+                and functional website for attracting customers and growing your
+                brand. That's why our web development services are customized to
+                meet your specific needs...
+              </p>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-web-img.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center gap-6 p-4 lg:flex-row-reverse justify-evenly animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <p
+                class="sm:max-w-[700px] max-w-[450px]"
+                data-i18n="pages.services.web.text2"
+              >
+                We understand that a great website is more than just an
+                attractive design. It needs to be functional, fast, and
+                responsive...
+              </p>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-web-img2.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="mobile" class="hidden tab-content">
+        <section class="space-y-16">
+          <div
+            class="flex flex-col items-center gap-6 p-4 lg:flex-row justify-evenly animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <h1
+                class="text-4xl md:text-5xl p-2 dark:text-[#3bbeef] text-[#159939] font-bold"
+                data-i18n="common.mobile"
+              >
+                Mobile Development
+              </h1>
+              <p
+                class="sm:max-w-[700px] max-w-[450px]"
+                data-i18n="pages.services.mobile.text1"
+              >
+                The world is always on the move, and we know it can be
+                challenging to keep up. But, have no fear, we have a solution
+                that can take your business to the next level! We all know that
+                smartphones are the way of the future...
+              </p>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-mobile-img.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center gap-6 p-4 lg:flex-row-reverse justify-evenly animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <p
+                class="sm:max-w-[700px] max-w-[450px]"
+                data-i18n="pages.services.mobile.text2"
+              >
+                We understand that a great website is more than just an
+                attractive design. It needs to be functional, fast, and
+                responsive...
+              </p>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-mobile-img2.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="ai" class="hidden tab-content">
+        <section class="space-y-16">
+          <div
+            class="flex flex-col items-center gap-6 p-4 lg:flex-row justify-evenly animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <h1
+                class="text-4xl md:text-5xl p-2 dark:text-[#3bbeef] text-[#159939] font-bold"
+                data-i18n="common.ai"
+              >
+                Artificial Intelligence
+              </h1>
+              <p
+                class="sm:max-w-[700px] max-w-[450px]"
+                data-i18n="pages.services.ai.text1"
+              >
+                Imagine having a team of machines that can learn and work on
+                their own, making informed decisions based on data input. With
+                AI, this dream is now a reality, and the possibilities are
+                endless!
+              </p>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-ai-img.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center gap-6 p-4 lg:flex-row-reverse justify-evenly animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <p
+                class="sm:max-w-[700px] max-w-[450px]"
+                data-i18n="pages.services.ai.text2"
+              >
+                At Javachip, we're passionate about helping you achieve your
+                business goals by providing you with intelligent and automated
+                solutions. With our cutting-edge AI technologies, you can now
+                offer your customers a personalized experience that caters to
+                their unique preferences and needs.
+              </p>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-ai-img2.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="cyber" class="hidden tab-content">
+        <section class="space-y-16">
+          <div
+            class="flex flex-col items-center gap-6 p-4 lg:flex-row justify-evenly animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <h1
+                class="text-4xl md:text-5xl p-2 dark:text-[#3bbeef] text-[#159939] font-bold"
+                data-i18n="common.cyber"
+              >
+                Cybersecurity
+              </h1>
+              <p
+                class="sm:max-w-[700px] max-w-[450px]"
+                data-i18n="pages.services.cyber.text1"
+              >
+                It's important to keep in mind that in today's digital world,
+                every company with an online presence is at risk of cybercrime.
+                It doesn't matter how big or small your organization is, your
+                website and digital assets are always vulnerable...
+              </p>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-cyber-img.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center gap-6 p-4 lg:flex-row-reverse justify-evenly animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <p
+                class="sm:max-w-[700px] max-w-[450px]"
+                data-i18n="pages.services.cyber.text2"
+              >
+                At Javachip, we're passionate about helping you achieve your
+                business goals by providing you with intelligent and automated
+                solutions...
+              </p>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-cyber-img2.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="marketing" class="hidden tab-content">
+        <section class="space-y-16 lg:mt-2">
+          <div
+            class="flex flex-col items-center gap-6 p-4 justify-evenly lg:flex-row animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <h1
+                class="text-4xl md:text-5xl p-2 dark:text-[#3bbeef] text-[#159939] font-bold"
+              >
+                SMM
+              </h1>
+
+              <h2
+                class="p-2 font-bold"
+                data-i18n="pages.services.digital.advantages"
+              ></h2>
+              <ul class="space-y-2 text-black list-disc dark:text-white">
+                <li data-i18n="pages.services.digital.smm.advantages.0"></li>
+                <li data-i18n="pages.services.digital.smm.advantages.1"></li>
+                <li data-i18n="pages.services.digital.smm.advantages.2"></li>
+                <li data-i18n="pages.services.digital.smm.advantages.3"></li>
+                <li data-i18n="pages.services.digital.smm.advantages.4"></li>
+                <li data-i18n="pages.services.digital.smm.advantages.5"></li>
+                <li data-i18n="pages.services.digital.smm.advantages.6"></li>
+                <li data-i18n="pages.services.digital.smm.advantages.7"></li>
+                <li data-i18n="pages.services.digital.smm.advantages.8"></li>
+                <li data-i18n="pages.services.digital.smm.advantages.9"></li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-digital-smm.png"
+                alt="SMM image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center gap-16 p-4 justify-evenly lg:flex-row-reverse animate-slideDownFade"
+          >
+            <div class="flex-grow space-y-6 text-base lg:text-xl">
+              <h2
+                class="mb-4 font-bold"
+                data-i18n="pages.services.digital.package"
+              ></h2>
+              <ul class="pl-8 space-y-4 text-black list-disc dark:text-white">
+                <li data-i18n="pages.services.digital.smm.package.0"></li>
+                <li data-i18n="pages.services.digital.smm.package.1"></li>
+                <li data-i18n="pages.services.digital.smm.package.2"></li>
+                <li data-i18n="pages.services.digital.smm.package.3"></li>
+                <li data-i18n="pages.services.digital.smm.package.4"></li>
+                <li data-i18n="pages.services.digital.smm.package.5"></li>
+                <li data-i18n="pages.services.digital.smm.package.6"></li>
+                <li data-i18n="pages.services.digital.smm.package.7"></li>
+                <li data-i18n="pages.services.digital.smm.package.8"></li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-center lg:ml-12">
+              <img
+                src="/assets/images/service-digital-smm2.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-8 sm:mx-6"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="space-y-16 lg:mt-2">
+          <div
+            class="flex flex-col items-center gap-6 p-4 justify-evenly lg:flex-row animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <h1
+                class="text-4xl md:text-5xl p-2 dark:text-[#3bbeef] text-[#159939] font-bold"
+              >
+                SEO
+              </h1>
+
+              <h2
+                class="p-2 font-bold"
+                data-i18n="pages.services.digital.advantages"
+              ></h2>
+              <ul class="space-y-2 text-black list-disc dark:text-white">
+                <li data-i18n="pages.services.digital.seo.advantages.0"></li>
+                <li data-i18n="pages.services.digital.seo.advantages.1"></li>
+                <li data-i18n="pages.services.digital.seo.advantages.2"></li>
+                <li data-i18n="pages.services.digital.seo.advantages.3"></li>
+                <li data-i18n="pages.services.digital.seo.advantages.4"></li>
+                <li data-i18n="pages.services.digital.seo.advantages.5"></li>
+                <li data-i18n="pages.services.digital.seo.advantages.6"></li>
+                <li data-i18n="pages.services.digital.seo.advantages.7"></li>
+                <li data-i18n="pages.services.digital.seo.advantages.8"></li>
+                <li data-i18n="pages.services.digital.seo.advantages.9"></li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-digital-seo.png"
+                alt="SEO image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center gap-16 p-4 justify-evenly lg:flex-row-reverse animate-slideDownFade"
+          >
+            <div class="flex-grow space-y-6 text-base lg:text-xl">
+              <h2
+                class="mb-4 font-bold"
+                data-i18n="pages.services.digital.package"
+              ></h2>
+              <ul class="pl-8 space-y-4 text-black list-disc dark:text-white">
+                <li data-i18n="pages.services.digital.seo.package.0"></li>
+                <li data-i18n="pages.services.digital.seo.package.1"></li>
+                <li data-i18n="pages.services.digital.seo.package.2"></li>
+                <li data-i18n="pages.services.digital.seo.package.3"></li>
+                <li data-i18n="pages.services.digital.seo.package.4"></li>
+                <li data-i18n="pages.services.digital.seo.package.5"></li>
+                <li data-i18n="pages.services.digital.seo.package.6"></li>
+                <li data-i18n="pages.services.digital.seo.package.7"></li>
+                <li data-i18n="pages.services.digital.seo.package.8"></li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-center lg:ml-12">
+              <img
+                src="/assets/images/service-digital-seo2.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-8 sm:mx-6"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="space-y-16 lg:mt-2">
+          <div
+            class="flex flex-col items-center gap-6 p-4 justify-evenly lg:flex-row animate-slideDownFade"
+          >
+            <div class="text-base lg:text-xl">
+              <h1
+                class="text-4xl md:text-5xl p-2 dark:text-[#3bbeef] text-[#159939] font-bold"
+              >
+                SEM
+              </h1>
+
+              <h2
+                class="p-2 font-bold"
+                data-i18n="pages.services.digital.advantages"
+              ></h2>
+              <ul class="space-y-2 text-black list-disc dark:text-white">
+                <li data-i18n="pages.services.digital.sem.advantages.0"></li>
+                <li data-i18n="pages.services.digital.sem.advantages.1"></li>
+                <li data-i18n="pages.services.digital.sem.advantages.2"></li>
+                <li data-i18n="pages.services.digital.sem.advantages.3"></li>
+                <li data-i18n="pages.services.digital.sem.advantages.4"></li>
+                <li data-i18n="pages.services.digital.sem.advantages.5"></li>
+                <li data-i18n="pages.services.digital.sem.advantages.6"></li>
+                <li data-i18n="pages.services.digital.sem.advantages.7"></li>
+                <li data-i18n="pages.services.digital.sem.advantages.8"></li>
+                <li data-i18n="pages.services.digital.sem.advantages.9"></li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-center">
+              <img
+                src="/assets/images/service-digital-sem.png"
+                alt="SEO image"
+                class="lg:max-w-[450px] max-w-[300px] my-4 sm:mx-3"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center gap-16 p-4 justify-evenly lg:flex-row-reverse animate-slideDownFade"
+          >
+            <div class="flex-grow space-y-6 text-base lg:text-xl">
+              <h2
+                class="mb-4 font-bold"
+                data-i18n="pages.services.digital.package"
+              ></h2>
+              <ul class="pl-8 space-y-4 text-black list-disc dark:text-white">
+                <li data-i18n="pages.services.digital.sem.package.0"></li>
+                <li data-i18n="pages.services.digital.sem.package.1"></li>
+                <li data-i18n="pages.services.digital.sem.package.2"></li>
+                <li data-i18n="pages.services.digital.sem.package.3"></li>
+                <li data-i18n="pages.services.digital.sem.package.4"></li>
+                <li data-i18n="pages.services.digital.sem.package.5"></li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-center lg:ml-12">
+              <img
+                src="/assets/images/service-digital-sem2.png"
+                alt="web image"
+                class="lg:max-w-[450px] max-w-[300px] my-8 sm:mx-6"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <div>
       <div
         class="h-[26vh] dark:bg-black bg-transparent rounded-bl-[20%] rounded-br-[20%] w-full"
       ></div>
       <footer
-        class="relative grid grid-cols-4 gap-8 px-10 pt-32 pb-10 bg-white"
+        class="relative grid grid-cols-1 gap-4 px-6 pt-16 pb-10 bg-white sm:grid-cols-2 lg:grid-cols-4"
       >
         <div>
           <a href="#">
             <img
               src="/assets/icons/javachip-logo.svg"
               alt="Javachip"
-              class="w-40"
+              class="w-32 sm:w-40"
             />
           </a>
-          <p class="mt-4 text-[#159939] font-bold text-xl">
+          <p
+            data-i18n="footer.logo.head"
+            class="mt-4 text-[#159939] font-bold text-lg sm:text-xl"
+          >
             Your Digital Partner
           </p>
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Quick Links</h3>
+          <h3
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.quickLinks"
+          >
+            Quick Links
+          </h3>
           <ul class="space-y-2">
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/services/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Our Services</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="common.services"
               >
+                Our Services
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/portfolio/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Portfolio</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.portfolio"
               >
+                Portfolio
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/about/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >About Us</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.about"
               >
+                About Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/contact/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Contact Us</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="pages.home.contact"
               >
+                Contact Us
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/privacy/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >Privacy Policy</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.privacy"
               >
+                Privacy Policy
+              </a>
             </li>
-            <li class="mt-5">
+            <li>
               <a
                 href="/src/pages/faq/index.html"
-                class="hover:text-[#159939] text-black font-bold text-base"
-                >FAQs</a
+                class="hover:text-[#159939] text-black font-bold text-sm sm:text-base"
+                data-i18n="navbar.faq"
               >
+                FAQs
+              </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Contact Us</h3>
+          <h3
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="pages.home.contact"
+          >
+            Contact Us
+          </h3>
           <div class="flex flex-col space-y-3">
             <div class="flex items-center gap-3">
               <img src="/assets/icons/phone.png" width="18px" alt="Phone" />
-              <a href="tel:+994998822500" class="font-medium text-gray-700">
+              <a
+                href="tel:+994998822500"
+                class="text-sm font-medium text-gray-700 sm:text-base"
+              >
                 +994 99 882 25 00
               </a>
             </div>
@@ -326,7 +877,7 @@
               <img src="/assets/icons/mail.png" width="18px" alt="Mail" />
               <a
                 href="mailto:office@thejavachip.com"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 office@thejavachip.com
               </a>
@@ -339,7 +890,7 @@
               />
               <a
                 href="https://www.google.com/maps/place/The+Javachip+LLC/@40.3655367,49.8309266,17z/data=!3m1!4b1!4m5!3m4!1s0x40307de589f96f27:0x30fb1daa2ffcbc45!8m2!3d40.3655326!4d49.8331153"
-                class="font-medium text-gray-700"
+                class="text-sm font-medium text-gray-700 sm:text-base"
               >
                 İçərişəhər 18, İlyas Əfəndiyev küç
               </a>
@@ -348,7 +899,12 @@
         </div>
 
         <div>
-          <h3 class="text-2xl text-[#159939] font-bold mb-4">Follow us</h3>
+          <h3
+            class="text-xl sm:text-2xl text-[#159939] font-bold mb-4"
+            data-i18n="footer.titles.social"
+          >
+            Follow us
+          </h3>
           <div class="flex gap-3">
             <a
               href="https://www.facebook.com/thejavachipcompany"

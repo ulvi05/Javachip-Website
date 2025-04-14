@@ -127,10 +127,11 @@
             />
           </button>
         </div>
+
         <!-- Mobile Menu -->
         <div
-          id="navbar-language"
-          class="absolute left-0 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+          id="mobile-navbar"
+          class="absolute left-0 z-40 flex-col hidden w-full border-t border-gray-200 top-full bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
         >
           <ul class="flex flex-col p-4 space-y-2">
             <li>
@@ -172,7 +173,7 @@
             <li>
               <a
                 data-i18n="navbar.privacy"
-                href="/src/pages/services/index.html"
+                href="/src/pages/privacy/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 Privacy Policy
@@ -181,7 +182,7 @@
             <li>
               <a
                 data-i18n="navbar.faq"
-                href="/src/pages/services/index.html"
+                href="/src/pages/faq/index.html"
                 class="block px-3 py-2 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 FAQs
@@ -191,13 +192,12 @@
         </div>
 
         <!-- Desktop Menu -->
-
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-language"
+          id="desktop-navbar"
         >
           <ul
-            class="flex-col hidden p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:items-center md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 lg:flex"
+            class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:items-center md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 lg:flex"
           >
             <li>
               <a
