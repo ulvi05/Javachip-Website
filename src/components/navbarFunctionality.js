@@ -64,7 +64,7 @@ export function navbarFunctionality() {
     const currentPage =
       window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll(
-      "#mobile-navbar a, #desktop-navbar a"
+      "#mobile-navbar a, #desktop-navbar a",
     );
 
     navLinks.forEach((link) => {
